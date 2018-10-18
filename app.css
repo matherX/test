@@ -1,0 +1,15 @@
+div{
+    height: 30%;
+    padding: 15%;
+    margin: 1.66%;
+    float: left;
+    border-radius: 8%;
+}
+.warp{
+    background-color: orange;
+}
+html {
+    -ms-overflow-style:none;
+    overflow:-moz-scrollbars-none;
+}
+html::-webkit-scrollbar{width:0px}
