@@ -1,0 +1,39 @@
+html{
+    font-size: 62.5%;
+    -ms-overflow-style:none;
+    overflow:-moz-scrollbars-none;
+}
+html::-webkit-scrollbar{width:0px}
+body{
+    font:normal 100% Arial,sans-serif;
+    width: auto;
+    background: #68cdd5;
+    height: 100%;
+}
+img { width:100%; -ms-interpolation-mode: bicubic;
+
+}
+p{
+    margin: 17% 15% 0% 15%;
+    color: aliceblue;
+    font-size: 1.6rem;
+}
+.a{
+    margin: 1%;
+    float: left;
+    overflow: auto;
+}
+.q{
+    float: none;
+    margin: 20% 36% 0% 36%;
+}
+.w{
+    margin: 20% 15% 0% 15%;
+    width:15%; float:left;
+}
+.e{
+
+    margin: 20% 15% 0% 15%;
+    width:15%; float:right;
+}
+
