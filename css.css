@@ -22,7 +22,7 @@ p{
     overflow: auto;
 }
 .logo{
-    width: 30%; float: none;
+    width: 32%; float: none;
     margin: 20% 38% 10% 38%;
 }
 .presentation{
@@ -30,11 +30,11 @@ p{
 }
 .user{
     margin: 20% 15% 0% 15%;
-    width:15%; float:left;
+    width:19%; float:left;
     text-align: center;
 }
 .choose{
     margin: 20% 15% 0% 15%;
-    width:15%; float:right;
+    width:18%; float:right;
     text-align: center;
 }
