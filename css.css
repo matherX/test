@@ -1,0 +1,40 @@
+html{
+    font-size: 62.5%;
+    -ms-overflow-style:none;
+    overflow:-moz-scrollbars-none;
+}
+html::-webkit-scrollbar{width:0px}
+body{
+    font: normal 100% Helvetica, Arial, sans-serif;
+    width: 100%;
+    background: #68cdd5;
+    height: 100%;
+    font-size: 4vw;
+    margin:0px;padding:0px;
+}
+img { width:100%; -ms-interpolation-mode: bicubic;}
+p{
+    color: aliceblue;
+}
+.return{
+    margin: 3%;
+    width: 9%; float: left;
+    overflow: auto;
+}
+.logo{
+    width: 32%; float: none;
+    margin: 20% 38% 10% 38%;
+}
+.presentation{
+    margin: 15% 15% 0% 15%;
+}
+.user{
+    margin: 20% 15% 0% 15%;
+    width:19%; float:left;
+    text-align: center;
+}
+.choose{
+    margin: 20% 15% 0% 15%;
+    width:17%; float:right;
+    text-align: center;
+}
