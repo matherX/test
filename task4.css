@@ -1,0 +1,61 @@
+body{
+    margin: 0px; padding: 0px;
+    background-color: #eaeaea;
+}
+header{
+    background-color: #5ac0ce;
+    padding: 0.9em;
+    color: white;
+    font-size: 1.6rem;
+}
+p{
+    padding:0px; margin:0px;
+    font-family: é»‘ä½“;
+}
+.one{
+    position: absolute;
+    left: 33px;
+    top: 18px;
+}
+.two{
+    position: relative;
+    width: 300px;
+    margin: 0px auto;
+    text-align: center;
+    top: -5px;
+}
+.three{
+    position: absolute;
+    right: 33px;
+    top: 18px;
+}
+input{
+    padding: 1.2rem 0 1.2rem 0;
+    font-size:1.6rem;
+    margin: 10px 0px 0px;
+    width: 100%;
+    border: #FFFFFF 0px solid;
+    text-align:left;
+}
+.phone{
+    background:url("1_03.png")no-repeat 30px white;
+    padding-left: 130px;
+}
+.cipher{
+    background: url("1_06.png")no-repeat 30px white;
+    padding-left: 130px;
+}
+.blue{
+    background-color: #5ac0ce;
+    color: #ffffff;
+    border: none;
+    padding: 1.2rem 0 1.2rem 0;
+    font-size:1.6rem;
+    margin: 10px 0px 0px;
+    outline:0 none;
+}
+a{
+    color: #5ac0ce;
+    margin-top: 10px;
+    float: right;
+}
