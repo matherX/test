@@ -1,0 +1,675 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+header{
+    width: 100%;
+    height: 40px;
+    background-color: white;
+}
+P{
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.item ul{
+    padding: 0;
+}
+.item li{
+    list-style-type :none;
+}
+button{
+    outline:none;
+}
+.white{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    color: #20b176;
+}
+.box{
+    width: 160px;
+    height: 32px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mark1{
+    width: 30px;
+    height: 29px;
+    background-image: url(1.png);
+    background-position: 0 0;
+}
+.mark2{
+    width: 30px;
+    height: 30px;
+    background-image: url(1.png);
+    background-position: 0 -30px;
+}
+.mark3{
+    width: 30px;
+    height: 30px;
+    background-image: url(1.png);
+    background-position: -34px 0;
+}
+.nav > li > a {
+    padding: 0 15px;
+    position: relative;
+    top: 75px;
+    border-radius: 0;
+    color: white;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border: 0;
+    color: white;
+}
+@media (max-width: 768px){
+    .container{
+        padding: 0;
+        background-color: #29b078;
+    }
+    .navbar-inverse .navbar-toggle{
+        position: absolute;
+        top: 55px;
+        right: 10px;
+        border: 0;
+    }
+    .navbar-collapse ul{
+        width: 100%;
+        background-color: #29b078;
+    }
+    .navbar-collapse li{
+        width: 100%;
+        height: 80px;
+    }
+    .nav-link{
+        width: 100%;
+        height: 0;
+        font-size: 2rem;
+        text-align: center;
+        text-decoration:none !important;
+        color: white !important;
+    }
+    .navbar-collapse{
+        padding: 0;
+        border: 0;
+    }
+    .container>.navbar-header{
+        height: 80px;
+        margin: 0;
+    }
+    .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
+        border: 0;
+        background-color: #36c388;
+    }
+    .option{
+        width: 100%;
+        padding: 25px 0;
+        position: relative;
+        top: -75px;
+        text-align: center;
+    }
+    .option:hover{
+        background-color: #36c388;
+    }
+    .nav-tabs > li > a:hover {
+        border: 0;
+        background-color: white;
+    }
+    .box1, .box2{
+        width: 100%;
+        height: 180px;
+    }
+    .data{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 200px;
+    }
+    .point{
+        width: 100%;
+        padding-left: 3%
+    }
+    .dot{
+        width: 100%;
+        height: 120px;
+    }
+    .dot:hover{
+        width: 100%;
+        height: 120px;
+        box-shadow: 0 0 3px #a6a6a6;
+    }
+    .curtain {
+        width: 50%;
+    }
+    .me, .scale, .WeChat{
+        width: 100%;
+    }
+}
+@media(min-width: 768px){
+    .container{
+        width: 100%;
+        height: 80px;
+        background-color: #29b078;
+    }
+    p{
+        word-break:break-all;
+        word-wrap:break-word;
+    }
+    .navbar-collapse li{
+        width: 90px;
+        height: 80px;
+    }
+    .nav-link{
+        height: 5px;
+        font-size: 2rem;
+        text-align: center;
+        text-decoration:none !important;
+        color: white !important;
+    }
+    .option {
+        width: 90px;
+        padding: 25px 0;
+        position: relative;
+        top: -78px;
+        left: -17px;
+        text-align: center;
+    }
+    .nav-tabs{
+        border: 0;
+    }
+    .nav-tabs > li > a:hover {
+        border: 0;
+        background-color: white;
+    }
+    .box1, .box2{
+        width: 50%;
+        height: 180px;
+    }
+    .box2{
+        border-left: 1px dashed;
+    }
+    .data{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .point{
+        width: 45%;
+    }
+    .mark9, .mark11, .mark13, .mark15{
+        width: 31px;
+        height: 26px;
+        background-image: url(1.png);
+        background-position: -36px -30px;
+    }
+    .frame1, .frame3, .frame5, .frame7{
+        width: 10%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .dot{
+        width: 50%;
+        height: 120px;
+    }
+    .dot:hover{
+        width: 50%;
+        height: 120px;
+        box-shadow: 0 0 3px #a6a6a6;
+    }
+    .curtain {
+        width: 33.3%;
+    }
+    .resume{
+        width: 100%;
+    }
+    #myCarousel1 ol{
+        position: relative;
+        top: 1570px;
+    }
+    .me, .scale{
+        width: 40%;
+    }
+    .WeChat{
+        width: 20%;
+    }
+}
+@media (min-width: 1024px){
+    .box1, .box2{
+        width: 33%;
+        height: 180px;
+    }
+    .box2{
+        border-left: 1px dashed;
+    }
+    .data{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .dot{
+        width: 33.3%;
+        height: 120px;
+    }
+    .dot:hover{
+        width: 33.3%;
+        height: 120px;
+        box-shadow: 0 0 3px #a6a6a6;
+    }
+    .curtain {
+        width: 20%;
+    }
+    .resume{
+        width: 46%;
+    }
+    #myCarousel1 ol{
+        position: relative;
+        top: 780px;
+    }
+    .me, .scale{
+        width: 40%;
+    }
+    .WeChat{
+        width: 20%;
+    }
+}
+@media(min-width: 1440px){
+    .sum{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box1, .box2{
+        width: 25%;
+        height: 180px;
+    }
+    .box2{
+        border-left: 1px dashed;
+    }
+    .data{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .point{
+        width: 21%;
+    }
+    .mark9, .mark10, .mark11, .mark13, .mark14, .mark15{
+        width: 31px;
+        height: 26px;
+        background-image: url(1.png);
+        background-position: -36px -30px;
+    }
+    .frame1, .frame2, .frame3, .frame5, .frame6, .frame7{
+        width: 5%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .dot{
+        width: 20%;
+        height: 120px;
+    }
+    .dot:hover{
+        width: 20%;
+        height: 120px;
+        box-shadow: 0 0 3px #a6a6a6;
+    }
+    .curtain {
+        width: 10%;
+    }
+    .resume{
+        width: 20%;
+    }
+    #myCarousel1 ol{
+        position: relative;
+        top: 420px;
+    }
+    .me, .scale{
+        width: 40%;
+    }
+    .WeChat{
+        width: 20%;
+    }
+}
+.main{
+    width: 100%;
+    height: auto;
+    padding: 2% 10% 0;
+    background-color: #fafbfa;
+}
+.sum{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+.box1, .box2{
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+.data{
+    width: 60%;
+    height: 140px;
+    font-size: 1.6rem;
+    color: #a6a6a6
+}
+.mark4{
+    width: 47px;
+    height: 67px;
+    background-image: url(1.png);
+    background-position: -6px -120px;
+}
+.mark5{
+    width: 71px;
+    height: 53px;
+    background-image: url(1.png);
+    background-position: -530px -61px;
+}
+.mark6{
+    width: 59px;
+    height: 60px;
+    background-image: url(1.png);
+    background-position: -530px 0;
+}
+.mark7{
+    width: 16px;
+    height: 16px;
+    margin: 3px;
+    background-image: url(1.png);
+    background-position: -2px -64px;
+}
+.mark8{
+    width: 16px;
+    height: 16px;
+    margin: 3px;
+    background-image: url(1.png);
+    background-position: -4px -64px;
+}
+.note1{
+    padding: 3px 0;
+    font-size: 2rem;
+    font-weight:800;
+}
+.note2{
+    padding: 3px 0;
+    font-size: 1.3rem;
+    color: #a6a6a6;
+}
+.quantity{
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 5px 0;
+    color: #1fa36d
+}
+h4{
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: 600;
+    color: black;
+}
+.guide{
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.point{
+    height:60px;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #9e9e9e;
+}
+.circle{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:0 0 2px #a6a6a6;
+    border-radius: 50%;
+    background-color: white;
+    color: #20b176;
+}
+.share{
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+.two{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.resume{
+    height: auto;
+    margin: 10px 15px;
+    box-shadow: 0 0 2px #a6a6a6;
+}
+.info{
+    padding: 10% 10%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mark16{
+    width: 121px;
+    height: 120px;
+    background-image: url(1.png);
+    background-position: -413px 5px;
+}
+.mark17{
+    width: 121px;
+    height: 120px;
+     background-image: url(1.png);
+     background-position: -61px 5px;
+ }
+.mark18{
+    width: 121px;
+    height: 120px;
+    background-image: url(1.png);
+    background-position: -179px 5px;
+}
+.mark19{
+    width: 121px;
+    height: 120px;
+    background-image: url(1.png);
+    background-position: -296px 5px;
+}
+.sponsor{
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.vessel{
+    width: 100%;
+    height: 100%;
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    box-shadow: 0 0 2px #a6a6a6;
+    background-color: white;
+ }
+.dot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mark20{
+     width: 150px;
+     height: 60px;
+     background-image: url(1.png);
+     background-position: -353px -278px;
+}
+.mark21{
+    width: 150px;
+    height: 60px;
+    background-image: url(1.png);
+    background-position: -45px -442px;
+}
+.mark22{
+    width: 150px;
+    height: 60px;
+    background-image: url(1.png);
+    background-position: -48px -280px;
+}
+.mark23{
+    width: 170px;
+    height: 60px;
+    background-image: url(1.png);
+    background-position: -423px -124px;
+}
+.mark24{
+    width: 150px;
+    height: 60px;
+    background-image: url(1.png);
+    background-position: -183px -120px;
+}
+#myCarousel1 .carousel-indicators li{
+    border: 0;
+    box-shadow: 0 0 2px #a6a6a6;
+    background-color: white;
+}
+#myCarousel1 .carousel-indicators
+.active{
+    background-color: #20b176;
+}
+.friend{
+    width: 100%;
+    height: auto;
+    padding: 2% 10%;
+    font-weight: 600;
+}
+.box3{
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.curtain a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+    color: #999999;
+}
+.array{
+    width: 100px;
+    height: 40px;
+    color: #999999;
+}
+.base{
+    width: 80px;
+    height: 3px;
+    display: none;
+    background-color: #29b078;
+}
+.array:hover .base{
+    position: relative;
+    top: 5px;
+    left: -20px;
+    display: block;
+}
+footer{
+    width: 100%;
+    height: auto;
+    background-color: #29b078;
+    color: white;
+}
+.shelf{
+    width: 100%;
+    height: auto;
+    padding: 2% 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.me, .scale{
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.name{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.7rem
+}
+.parry{
+    width: 2px;
+    height: 60%;
+    margin: 0 10px;
+    background-color: white;
+}
+.details{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.3rem;
+}
+.details a{
+    color: white;
+}
+.strip{
+    width: 100%;
+    height: auto;
+}
+.strip a{
+    color: white;
+    padding-right: 10px;
+}
+.WeChat{
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    font-size: 1.6rem;
+}
+.patch{
+    width: 100%;
+    height: auto
+}
+.mark25{
+    width: 92px;
+    height: 92px;
+    background-image: url(1.png);
+    background-position: -71px -117px;
+}
+.end{
+    padding: 5px 0;
+    text-align: center;
+    border-top: 1px solid white;
+}
