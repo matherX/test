@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+}
+.box{
+    margin: 2%;
+}
+.one{
+    float: left;
+    width: 32%;
+    padding: 16% 0;
+    border-radius: 10px;
+    background-color: #ffa600;
+}
+.two{
+    float: right;
+    width: 32%;
+    padding: 16% 0;
+    border-radius: 10px;
+    background-color: #ffa600;
+    clear: none;
+}
+.three{
+    width: 32%;
+    margin: auto;
+    padding: 16% 0;
+    border-radius: 10px;
+    background-color: #ffa600;
+}
