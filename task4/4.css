@@ -1,0 +1,70 @@
+body{
+    width: 100%;
+    margin: 0;
+    background-color: #eef0f4;
+}
+header{
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    color: white;
+    background-color: #5ac0ce;
+}
+button{
+    outline: none;
+}
+.one{
+    float: left;
+    line-height: 60px;
+    padding: 0 10px;
+    border: 0;
+    font-size: 20px;
+    color: white;
+    background-color: #5ac0ce;
+}
+.two{
+    float: right;
+    line-height: 60px;
+    padding: 0 10px;
+    border: 0;
+    font-size: 20px;
+    color: white;
+    background-color: #5ac0ce;
+}
+.data{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    background-color: white;
+}
+img{
+    padding: 0 15px;
+}
+input{
+    width: 100%;
+    height: 25px;
+    padding: 0 15px;
+    font-size: 15px;
+    border: 0;
+    border-left: #bababa 1px solid;
+    outline: none;
+}
+.three{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    border: 0;
+    color: white;
+    background-color: #5ac0ce
+}
+a{
+    float: right;
+    margin: 10px;
+    color: #5ac0ce;
+}
