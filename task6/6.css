@@ -99,7 +99,6 @@ form{
     width: 100%;
     height: 120px;
     font-size: 1.8rem;
-    margin: 0;
     border-bottom: #f4f5f5 1px solid;
     display: flex;
     flex-direction: column;
@@ -114,21 +113,22 @@ form{
 .icon2{
     width: 12px;
     height: 12px;
-    margin: 0 20px;
+    margin: 0 13px;
     background: url('6.png') -94px -10px;
 }
 .grid3{
     display: flex;
     justify-content: space-between;
-    margin: 10px 20px 10px 68px;
+    margin: 10px 20px 10px 38px;
 }
 .icon3{
     width: 10px;
     height: 12px;
-    margin: 0 20px;
+    margin: 0 14px;
     background: url('6.png') -94px -42px;
 }
 .hue{
+    width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
