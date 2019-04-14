@@ -1,0 +1,62 @@
+body{
+  margin: 0;
+  background-color: #eef0f4;
+}
+@mixin one(){
+  height: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  border: 0;
+  color: white;
+  background-color: #5ac0ce;
+  outline: none;
+}
+header{
+  @include one();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  button{
+    @include one();
+    margin: 0 10px;
+    font-weight: 500;
+  }
+}
+main{
+  color: #a4a4a4;
+  div{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    background-color: white;
+    img{
+      margin: 15px;
+    }
+    input{
+      height: 25px;
+      padding-left: 15px;
+      border: white 1px solid;
+      border-left: #e9e9eb 1px solid;
+      font-size: 16px;
+      outline: none;
+    }
+  }
+  .two{
+    @include one();
+    width: 100%;
+    margin-top: 10px;
+  }
+  .two{
+    @include one();
+    width: 100%;
+    margin-top: 10px;
+  }
+  a{
+    float: right;
+    margin: 10px;
+    color: #5ac0ce;
+  }
+}
