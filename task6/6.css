@@ -84,6 +84,7 @@ form{
 }
 .dropdown-menu{
     width: 100%;
+    min-width: 100%;
     border: 0;
 }
 .dropdown-menu>li>a{
