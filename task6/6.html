@@ -4,46 +4,54 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="6.css">
 </head>
 <body>
 <header>
     <div class="box1">
-        <button>找雇主</button>
-        <button class="grid1">找护工</button>
+        <button  class="grid1">找雇主</button>
+        <button  class="grid1">找护工</button>
     </div>
     <button class="icon1"></button>
 </header>
 <div class="box2">
-    <form>
-        <a class="btn-select">
-            <select>
-                <option>所在地</option>
-                <option>上海</option>
-                <option>选项三</option>
-            </select>
-        </a>
-    </form>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle"
+                data-toggle="dropdown">所在地
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">北京</a></li>
+            <li><a href="#">上海</a></li>
+            <li><a href="#">深圳</a></li>
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle"
+                data-toggle="dropdown">食宿
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">三餐</a></li>
+            <li><a href="#">住院</a></li>
+            <li><a href="#">住院+三餐</a></li>
+        </ul>
+    </div>
     <div class="wire"></div>
-    <form>
-        <a class="btn-select">
-            <select>
-                <option>所在地</option>
-                <option>上海</option>
-                <option>选项三</option>
-            </select>
-        </a>
-    </form>
-    <div class="wire"></div>
-    <form>
-        <a class="btn-select">
-            <select>
-                <option>所在地</option>
-                <option>上海</option>
-                <option>选项三</option>
-            </select>
-        </a>
-    </form>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle"
+                data-toggle="dropdown">病人情况
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">自主行动</a></li>
+            <li><a href="#">需陪护</a></li>
+            <li><a href="#">家人看护</a></li>
+        </ul>
+    </div>
 </div>
 <div class="box3">
     <div class="grid2">

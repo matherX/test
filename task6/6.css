@@ -23,7 +23,7 @@ p{
 }
 .box1{
     width: 15rem;
-    height: 4rem;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,18 +31,20 @@ p{
     background-color: #54a7b2;
 }
 button{
-    width: 50%;
     padding: 0;
-    font-size: 2rem;
-    border: 0;
     outline: none;
-    background-color: #54a7b2;
+    border: 0;
+    border-radius: 5px;
+    font-size: 2rem;
     color: white;
+    background-color: #54a7b2;
 }
 .grid1{
+    width: 50%;
     height: 100%;
-    border-radius: 5px;
-    color: #8fcfd6;
+}
+.grid1:hover{
+    color: #5ec0ce;
     background-color: white;
 }
 .icon1{
@@ -53,6 +55,8 @@ button{
     background: url('6.png') -10px -10px;
 }
 .box2{
+    width: 100%;
+    height: 50px;
     margin-top: 60px;
     display: flex;
     justify-content: space-around;
@@ -60,17 +64,30 @@ button{
 }
 form{
     width: 33%;
-    outline: none;
     border-bottom: #f3f3f3 1px solid;
 }
-select{
+.btn-group{
+    width: 33%;
+    height: 100%;
+}
+.btn-default{
     width: 100%;
-    height: 5rem;
+    height: 100%;
     border: 0;
+    border-radius: 0;
+    color: #c0c0c0;
+}
+.caret{
+    position: absolute;
+    top: 24px;
+    right: 5px;
+}
+.dropdown-menu{
+    width: 100%;
+    border: 0;
+}
+.dropdown-menu>li>a{
     text-align: center;
-    text-align-last: center;
-    font-size: 1.8rem;
-    color: #b8b8b9;
 }
 .wire{
     width: 1px;
@@ -126,7 +143,7 @@ select{
     -moz-transform:rotate(-45deg);
 }
 footer{
-    width: calc(100% - 40%);
+    width: 100%;
     height: 6rem;
     padding: 0 20%;
     position: fixed;
