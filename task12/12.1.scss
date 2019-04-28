@@ -1,0 +1,162 @@
+body{
+  margin: 0;
+  p{
+    margin: 0;
+  }
+  $pixel: 10px;
+  $border: 1px solid;
+  @mixin one(){
+    padding-left: $pixel;
+    display: flex;
+    align-items: center;
+  }
+  @mixin two(){
+    position: fixed;
+    z-index: 100;
+    height: $pixel*5;
+    line-height: $pixel*5;
+    color: white;
+  }
+  @mixin three (){
+    width: 48%;
+    height: $pixel*4;
+    justify-content: center;
+    border: #5fc0ce $border;
+    border-radius: $pixel*0.5;
+  }
+  header{
+    @include two();
+    width: 100%;
+    top: 0;
+    font:{
+      size: $pixel*2;
+      weight: 500;
+    }
+    text-align: center;
+    background-color: #5fc0ce;
+    span{
+      position: absolute;
+      top: $pixel*2;
+      left: $pixel;
+      width: $pixel;
+      height: $pixel;
+      border-bottom: $border white;
+      border-left: $border white;
+      transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+    }
+  }
+  main{
+    margin: $pixel*5 0;
+    .box{
+      display: flex;
+      align-items: center;
+      height: $pixel*20;
+      font-size: $pixel*2;
+      color: white;
+      background: url("12 (3).png") no-repeat;
+      background-size: 100% 100%;
+      .icon1{
+        width: $pixel*8.5;
+        height: $pixel*8.5;
+        margin-left: $pixel*2;
+        border-radius: 50%;
+        background: url('12.png') -23px -10px;
+      }
+      .icon1:hover{
+        width: $pixel*13.1;
+        height: $pixel*15.8;
+        margin-left: -$pixel;
+        border-radius: 0;
+        background: url('12.png') 0 -10px;
+      }
+      div{
+        padding: 0 $pixel*2;
+        .shelf{
+          font-size: $pixel*1.5;
+          padding: $pixel*0.7 0;
+          vertical-align: middle;
+          .icon2{
+            display: inline-block;
+            width: $pixel*0.9;
+            height: $pixel*1.2;
+            margin-right: $pixel*0.4;
+            background: url('12.png') -161px -116px;
+          }
+        }
+      }
+    }
+    .box1{
+      @include one();
+      height: $pixel*5;
+      color: #3f3f40;
+      border-bottom: #eeeff0 $border;
+      .plank{
+        width: 3px;
+        top: 20px;
+        height: $pixel*1.7;
+        margin-right: $pixel;
+        border-radius: $pixel*5;
+        background-color: #5dc1cd;
+      }
+    }
+    .box2{
+      @include one();
+      border-bottom: #eeeff0 $border;
+      flex-direction: column;
+      .grid{
+        width: calc(100% - 20px);
+        min-height: $pixel*5;
+        padding: 5px 10px 5px 0;
+        @include one();
+        border-bottom: #eeeff0 $border;
+        flex-wrap: nowrap;
+        .icon3{
+          width: 12px;
+          height: 12px;
+          display: inline-block;
+          margin-right: 5px;
+          background: url('12.png') -202px -131px;
+        }
+        .dot1{
+          min-width: 64px;
+          color: #aaabae;
+        }
+        .dot2{
+          color: #e2686a;
+        }
+        .wire{
+          min-width: 2px;
+          height: $pixel*1.5;
+          margin: 0 $pixel;
+          background-color: #eef2f2;
+        }
+      }
+    }
+  }
+  footer{
+    @include two();
+    width: calc(100% - 20px);
+    bottom: 0;
+    background-color: white;
+    @include one();
+    justify-content: space-between;
+    padding-right: 10px;
+    border: 0;
+    .box5{
+      @include three();
+      @include one();
+      padding: 0;
+      color: #5fc0ce;
+    }
+    .box6{
+      @include three();
+      @include one();
+      padding: 0;
+      background-color: #5fc0ce;
+    }
+  }
+
+}
