@@ -13,7 +13,7 @@ body {
     text-align: center;
     color: white;
     background-color: #5fc0ce; }
-    body header span {
+    body header a {
       position: absolute;
       top: 20px;
       left: 10px;
