@@ -3,36 +3,30 @@ body{
   p{
     margin: 0;
   }
+  button{
+    outline: none;
+  }
   $pixel: 10px;
   $border: 1px solid;
   @mixin one(){
-    padding-left: $pixel;
     display: flex;
     align-items: center;
   }
-  @mixin two(){
-    position: fixed;
-    z-index: 100;
-    height: $pixel*5;
-    line-height: $pixel*5;
-    color: white;
-  }
   @mixin three (){
+    justify-content: center;
     width: 48%;
     height: $pixel*4;
-    justify-content: center;
     border: #5fc0ce $border;
     border-radius: $pixel*0.5;
   }
   header{
-    @include two();
-    width: 100%;
+    position: fixed;
     top: 0;
-    font:{
-      size: $pixel*2;
-      weight: 500;
-    }
+    width: 100%;
+    font-size: $pixel*2;
+    line-height: $pixel*5;
     text-align: center;
+    color: white;
     background-color: #5fc0ce;
     span{
       position: absolute;
@@ -88,35 +82,32 @@ body{
         }
       }
     }
-    .box1{
+    .content{
       @include one();
-      height: $pixel*5;
-      color: #3f3f40;
+      flex-wrap: wrap;
+      min-height: $pixel*5;
+      padding-left: $pixel;
       border-bottom: #eeeff0 $border;
       .plank{
-        width: 3px;
-        top: 20px;
+        top: 40px;
+        display: inline-block;
+        min-width: 3px;
         height: $pixel*1.7;
         margin-right: $pixel;
         border-radius: $pixel*5;
         background-color: #5dc1cd;
       }
-    }
-    .box2{
-      @include one();
-      border-bottom: #eeeff0 $border;
-      flex-direction: column;
-      .grid{
+      .column{
+        @include one();
+        flex-wrap: nowrap;
         width: calc(100% - 20px);
         min-height: $pixel*5;
-        padding: 5px 10px 5px 0;
-        @include one();
+        padding: 5px 10px;
         border-bottom: #eeeff0 $border;
-        flex-wrap: nowrap;
         .icon3{
+          display: inline-block;
           width: 12px;
           height: 12px;
-          display: inline-block;
           margin-right: 5px;
           background: url('12.png') -202px -131px;
         }
@@ -137,26 +128,26 @@ body{
     }
   }
   footer{
-    @include two();
-    width: calc(100% - 20px);
+    position: absolute;
     bottom: 0;
-    background-color: white;
     @include one();
-    justify-content: space-between;
-    padding-right: 10px;
+    justify-content: space-around;
+    width: 100%;
+    height: $pixel*5;
+    color: white;
+    background-color: white;
     border: 0;
-    .box5{
-      @include three();
+    .btn1{
       @include one();
-      padding: 0;
+      @include three();
       color: #5fc0ce;
+      background-color: white;
     }
-    .box6{
-      @include three();
+    .btn2{
       @include one();
-      padding: 0;
+      @include three();
+      color: white;
       background-color: #5fc0ce;
     }
   }
-
 }

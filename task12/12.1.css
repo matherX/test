@@ -2,17 +2,16 @@ body {
   margin: 0; }
   body p {
     margin: 0; }
+  body button {
+    outline: none; }
   body header {
     position: fixed;
-    z-index: 100;
-    height: 50px;
-    line-height: 50px;
-    color: white;
-    width: 100%;
     top: 0;
+    width: 100%;
     font-size: 20px;
-    font-weight: 500;
+    line-height: 50px;
     text-align: center;
+    color: white;
     background-color: #5fc0ce; }
     body header span {
       position: absolute;
@@ -60,87 +59,75 @@ body {
             height: 12px;
             margin-right: 4px;
             background: url("12.png") -161px -116px; }
-    body main .box1 {
-      padding-left: 10px;
+    body main .content {
       display: flex;
       align-items: center;
-      height: 50px;
-      color: #3f3f40;
+      flex-wrap: wrap;
+      min-height: 50px;
+      padding-left: 10px;
       border-bottom: #eeeff0 1px solid; }
-      body main .box1 .plank {
-        width: 3px;
-        top: 20px;
+      body main .content .plank {
+        top: 40px;
+        display: inline-block;
+        min-width: 3px;
         height: 17px;
         margin-right: 10px;
         border-radius: 50px;
         background-color: #5dc1cd; }
-    body main .box2 {
-      padding-left: 10px;
-      display: flex;
-      align-items: center;
-      border-bottom: #eeeff0 1px solid;
-      flex-direction: column; }
-      body main .box2 .grid {
-        width: calc(100% - 20px);
-        min-height: 50px;
-        padding: 5px 10px 5px 0;
-        padding-left: 10px;
+      body main .content .column {
         display: flex;
         align-items: center;
-        border-bottom: #eeeff0 1px solid;
-        flex-wrap: nowrap; }
-        body main .box2 .grid .icon3 {
+        flex-wrap: nowrap;
+        width: calc(100% - 20px);
+        min-height: 50px;
+        padding: 5px 10px;
+        border-bottom: #eeeff0 1px solid; }
+        body main .content .column .icon3 {
+          display: inline-block;
           width: 12px;
           height: 12px;
-          display: inline-block;
           margin-right: 5px;
           background: url("12.png") -202px -131px; }
-        body main .box2 .grid .dot1 {
+        body main .content .column .dot1 {
           min-width: 64px;
           color: #aaabae; }
-        body main .box2 .grid .dot2 {
+        body main .content .column .dot2 {
           color: #e2686a; }
-        body main .box2 .grid .wire {
+        body main .content .column .wire {
           min-width: 2px;
           height: 15px;
           margin: 0 10px;
           background-color: #eef2f2; }
   body footer {
-    position: fixed;
-    z-index: 100;
-    height: 50px;
-    line-height: 50px;
-    color: white;
-    width: calc(100% - 20px);
+    position: absolute;
     bottom: 0;
-    background-color: white;
-    padding-left: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-right: 10px;
+    justify-content: space-around;
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: white;
     border: 0; }
-    body footer .box5 {
-      width: 48%;
-      height: 40px;
-      justify-content: center;
-      border: #5fc0ce 1px solid;
-      border-radius: 5px;
-      padding-left: 10px;
+    body footer .btn1 {
       display: flex;
       align-items: center;
-      padding: 0;
-      color: #5fc0ce; }
-    body footer .box6 {
+      justify-content: center;
       width: 48%;
       height: 40px;
-      justify-content: center;
       border: #5fc0ce 1px solid;
       border-radius: 5px;
-      padding-left: 10px;
+      color: #5fc0ce;
+      background-color: white; }
+    body footer .btn2 {
       display: flex;
       align-items: center;
-      padding: 0;
+      justify-content: center;
+      width: 48%;
+      height: 40px;
+      border: #5fc0ce 1px solid;
+      border-radius: 5px;
+      color: white;
       background-color: #5fc0ce; }
 
 /*# sourceMappingURL=12.1.css.map */
