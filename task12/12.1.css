@@ -35,13 +35,13 @@ body {
       color: white;
       background: url("12 (3).png") no-repeat;
       background-size: 100% 100%; }
-      body main .box .icon1 {
+      body main .box .logo1 {
         width: 85px;
         height: 85px;
         margin-left: 20px;
         border-radius: 50%;
         background: url("12.png") -23px -10px; }
-      body main .box .icon1:hover {
+      body main .box .logo1:hover {
         width: 131px;
         height: 158px;
         margin-left: -10px;
@@ -53,12 +53,12 @@ body {
           font-size: 15px;
           padding: 7px 0;
           vertical-align: middle; }
-          body main .box div .shelf .icon2 {
+          body main .box div .shelf .logo2 {
             display: inline-block;
             width: 9px;
             height: 12px;
             margin-right: 4px;
-            background: url("12.png") -161px -116px; }
+            background: url("12.png") -10px -188px; }
     body main .content {
       display: flex;
       align-items: center;
@@ -82,12 +82,12 @@ body {
         min-height: 50px;
         padding: 5px 10px;
         border-bottom: #eeeff0 1px solid; }
-        body main .content .column .icon3 {
+        body main .content .column .logo3 {
           display: inline-block;
           width: 12px;
           height: 12px;
           margin-right: 5px;
-          background: url("12.png") -202px -131px; }
+          background: url("12.png") -161px -138px; }
         body main .content .column .dot1 {
           min-width: 64px;
           color: #aaabae; }
