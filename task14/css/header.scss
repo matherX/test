@@ -1,0 +1,19 @@
+.header1{
+  .column{
+    @include flex();
+    color: #28b078;
+    .box{
+      @include flex();
+      .logo1{
+        @include circle(20px,19px,-507px -326px);
+      }
+      .logo2{
+        @include circle(20px,19px,-546px -326px);
+      }
+      .logo3{
+        @include circle(20px,19px,-551px -283px);
+      }
+    }
+  }
+  @import "module.scss";
+}

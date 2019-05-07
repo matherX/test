@@ -1,0 +1,23 @@
+.header1 .column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #28b078; }
+  .header1 .column .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .header1 .column .box .logo1 {
+      width: 19px;
+      height: 18px;
+      background: url("14.png") -406px -212px; }
+    .header1 .column .box .logo2 {
+      width: 19px;
+      height: 18px;
+      background: url("14.png") -546px -326px; }
+    .header1 .column .box .logo3 {
+      width: 19px;
+      height: 18px;
+      background: url("14.png") -551px -33px; }
+
+/*# sourceMappingURL=header.css.map */

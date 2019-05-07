@@ -1,0 +1,15 @@
+body {
+  @mixin flex($x:space-between,$y:center){
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+  }
+  @mixin circle($width:24px,$height:24px,$site:-290px -109px) {
+    min-width: $width;
+    height: $height;
+    background: url("14.png") $site;
+  }
+  @import "./css/header";
+  @import "./css/main";
+}
+
