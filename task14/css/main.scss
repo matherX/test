@@ -110,13 +110,13 @@
       .box{
         width: 25%;
       }
-      .box:nth-of-type(3n+4){
+      .box:nth-of-type(4){
         border-left: 1px dashed;
       }
     }
     .column {
       width: 25%;
-      .logo8:nth-of-type(4){
+      .logo8:nth-of-type(3n+4){
         display: block;
         border: black 1px solid;
       }
