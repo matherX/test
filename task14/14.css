@@ -153,7 +153,7 @@ body .main1 .viewport {
       border-left: 1px dashed; }
   body .main1 .column {
     width: 50%; }
-    body .main1 .column .logo8:nth-of-type(4) {
+    body .main1 .column .logo8:nth-of-type(odd) {
       display: none; } }
 @media (min-width: 1440px) {
   body .main1 .content {
@@ -167,7 +167,7 @@ body .main1 .viewport {
       border-left: 1px dashed; }
   body .main1 .column {
     width: 25%; }
-    body .main1 .column .logo8:nth-of-type(4) {
+    body .main1 .column .logo8:nth-of-type(3n+4) {
       display: block;
       border: black 1px solid; } }
 body .main1 .content .box {
@@ -217,7 +217,6 @@ body .main1 .content1 {
         color: #1ba36e;
         box-shadow: 0 0 5px 0 #9b9c9d; }
     body .main1 .content1 .column .logo8 {
-      display: none;
       min-width: 24px;
       height: 23px;
       background: url("14.png") -507px -283px; }
