@@ -98,7 +98,7 @@
     }
     .column{
       width: 50%;
-      .logo8:nth-of-type(odd){
+      .logo8:nth-of-type(even){
         display: none;
       }
     }
@@ -116,7 +116,7 @@
     }
     .column {
       width: 25%;
-      .logo8:nth-of-type(3n+4){
+      .logo8:nth-of-type(3n+3){
         display: block;
         border: black 1px solid;
       }

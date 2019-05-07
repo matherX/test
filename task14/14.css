@@ -153,7 +153,7 @@ body .main1 .viewport {
       border-left: 1px dashed; }
   body .main1 .column {
     width: 50%; }
-    body .main1 .column .logo8:nth-of-type(odd) {
+    body .main1 .column .logo8:nth-of-type(even) {
       display: none; } }
 @media (min-width: 1440px) {
   body .main1 .content {
@@ -167,7 +167,7 @@ body .main1 .viewport {
       border-left: 1px dashed; }
   body .main1 .column {
     width: 25%; }
-    body .main1 .column .logo8:nth-of-type(3n+4) {
+    body .main1 .column .logo8:nth-of-type(3n+3) {
       display: block;
       border: black 1px solid; } }
 body .main1 .content .box {
