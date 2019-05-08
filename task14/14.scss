@@ -1,4 +1,8 @@
 body {
+  margin: 0;
+  p, ul{
+    margin: 0;
+  }
   @mixin flex($x:space-between,$y:center){
     display: flex;
     justify-content: $x;
@@ -12,4 +16,3 @@ body {
   @import "./css/header";
   @import "./css/main";
 }
-

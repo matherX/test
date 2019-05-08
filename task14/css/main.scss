@@ -1,4 +1,22 @@
 .main1{
+  background-color: #fafafa;
+  ul{
+    position: relative;
+    top: -20px;
+    @include flex(center);
+    width: 100%;
+    padding: 0;
+    li{
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      box-shadow: 0 0 5px 0 #9b9c9d;
+    }
+    li:hover{
+      background-color: #1ba36e;
+    }
+  }
   //轮播图
   .viewport {
     /*position: relative;*/
@@ -35,21 +53,7 @@
         }
       }
     }
-    ul{
-      position: relative;
-      top: -20px;
-      @include flex(center);
-      width: 100%;
-      li{
-        display: block;
-        width: 10px;
-        height: 10px;
-        background-color: #959394;
-      }
-      li:hover{
-        background-color: white;
-      }
-    }
+
     span{
       display: block;
       width: 15px;
@@ -165,6 +169,27 @@
       }
       .logo8{
         @include circle(24px,23px,-507px -283px);
+      }
+    }
+  }
+  .container-fluid{
+    .col_box{
+      @include flex(center);
+      flex-direction: column;
+      height: 300px;
+      background-color: white;
+      box-shadow: 0 0 5px 0 #9b9c9d;
+      .logo9{
+        @include circle(81px,81px,-406px -212px)
+      }
+      .logo10{
+        @include circle(81px,81px,-10px -374px)
+      }
+      .logo11{
+        @include circle(81px,81px,-406px -10px)
+      }
+      .logo12{
+        @include circle(81px,81px,-406px -111px)
       }
     }
   }
