@@ -5,13 +5,13 @@
     .box{
       @include flex();
       .logo1{
-        @include circle(20px,19px,-507px -326px);
+        @include circle(20px,19px,-392px -357px);
       }
       .logo2{
-        @include circle(20px,19px,-546px -326px);
+        @include circle(20px,19px,-431px -357px);
       }
       .logo3{
-        @include circle(20px,19px,-551px -283px);
+        @include circle(20px,19px,-353px -357px);
       }
     }
   }

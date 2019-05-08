@@ -5,6 +5,7 @@
     top: -20px;
     @include flex(center);
     width: 100%;
+    margin: 0;
     padding: 0;
     li{
       display: block;
@@ -53,7 +54,6 @@
         }
       }
     }
-
     span{
       display: block;
       width: 15px;
@@ -133,19 +133,19 @@
       height: 180px;
       box-sizing: border-box;
       .logo4{
-        @include circle(32px,47px,-507px -216px);
+        @include circle(32px,47px,-301px -357px);
       }
       .logo5{
-        @include circle(45px,36px,-507px -99px);
+        @include circle(45px,36px,-390px -223px);
       }
       .logo6{
-        @include circle(39px,41px,-507px -155px);
+        @include circle(39px,41px,-452px -288px);
       }
       .green{
         color: #1ba36e;
         .logo7{
           display: inline-block;
-          @include circle(10px,10px,-566px -155px);
+          @include circle(10px,10px,-10px -458px);
         }
       }
     }
@@ -168,7 +168,7 @@
         }
       }
       .logo8{
-        @include circle(24px,23px,-507px -283px);
+        @include circle(24px,23px,-455px -223px);
       }
     }
   }
@@ -180,16 +180,41 @@
       background-color: white;
       box-shadow: 0 0 5px 0 #9b9c9d;
       .logo9{
-        @include circle(81px,81px,-406px -212px)
+        @include circle(81px,81px,-10px -357px);
       }
       .logo10{
-        @include circle(81px,81px,-10px -374px)
+        @include circle(81px,81px,-111px -357px);
       }
       .logo11{
-        @include circle(81px,81px,-406px -10px)
+        @include circle(81px,81px,-390px -122px);
       }
       .logo12{
-        @include circle(81px,81px,-406px -111px)
+        @include circle(81px,81px,-285px -162px);
+      }
+    }
+    .column2{
+      background-color: white;
+      .column2_box{
+        @include flex(center);
+        height: 200px;
+        .logo13{
+          @include circle(159px,132px,-227px -10px);
+        }
+        .logo14{
+          @include circle(131px,106px,-26px -162px);
+        }
+        .logo15{
+          @include circle(197px,149px, -10px -10px);
+        }
+        .logo16{
+          @include circle(131px,49px,-10px -288px);
+        }
+        .logo17{
+          @include circle(131px,49px,-161px -288px);
+        }
+      }
+      .column2_box:hover{
+        box-shadow: 0 0 5px 0 #9b9c9d;
       }
     }
   }

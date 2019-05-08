@@ -1,0 +1,51 @@
+.footer1{
+  background-color: #28b078;
+  @media (max-width:992px){
+    .friendlink_box:nth-of-type(2){
+      @include flex(none,flex-end);
+      flex-direction: column;
+    }
+  }
+  @media (min-width:992px){
+    .friendlink_box{
+      @include flex(space-between);
+    }
+    .column{
+      @include flex(space-between,none);
+      .column_box:nth-of-type(3) {
+        @include flex(space-between,center);
+        flex-direction: column;
+      }
+    }
+  }
+  .friendlink{
+    background-color: white;
+    ul{
+      width: 50px;
+      margin: 0;
+      li:hover{
+        border-bottom: #28b078 2px solid;
+      }
+    }
+  }
+  .column{
+    color: white;
+    .column_box{
+      @include flex(space-between,none);
+      flex-direction: column;
+      height: 120px;
+      .logo18{
+        display: block;
+        @include circle(69px,69px,-212px -357px);
+      }
+      .note{
+        a:nth-of-type(1), a:nth-of-type(2){
+          border-right: white 2px solid;
+        }
+      }
+      a:hover{
+        border-bottom: white 1px solid;
+      }
+    }
+  }
+}

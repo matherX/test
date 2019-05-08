@@ -53,15 +53,21 @@ nav {
     position: absolute;
     top: 37.5px;
     left: 10%;
-    @include circle(120px, 45px, -111px -374px);
+    @include circle(120px, 45px, -312px -288px);
   }
   ul{
+    margin: 0;
+    padding: 0;
     color: white;
     list-style-type: none;
     li{
       width: 100%;
       height: 60px;
       box-sizing: border-box;
+      a{
+        text-decoration: none !important;
+        color: white !important;
+      }
     }
   }
 }
