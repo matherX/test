@@ -128,7 +128,7 @@ body{
     }
   }
   footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     @include one();
     justify-content: space-around;
