@@ -3,6 +3,7 @@ body {
   p{
     margin: 0;
   }
+  $border: 1px solid;
   @mixin flex($x:space-between,$y:center){
     display: flex;
     justify-content: $x;

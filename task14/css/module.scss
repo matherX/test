@@ -5,13 +5,12 @@ input[type="checkbox"] {display: none;}
   }
   input[type="checkbox"]:checked~ ul{
     display: block;
+    padding-top: 60px;
   }
   ul{
-    position: relative;
-    top: 60px;
     display: none;
     width: 100%;
-    min-height: 300px;
+    min-height: 240px;
     background-color: #28b078;
     li:hover, :active{
       background-color: #36c388;

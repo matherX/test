@@ -2,6 +2,10 @@ body {
   margin: 0; }
   body p {
     margin: 0; }
+  body header p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
   body header .column {
     display: flex;
     justify-content: space-between;
@@ -28,13 +32,12 @@ body {
     display: none; }
   @media (max-width: 767px) {
     body header input[type="checkbox"]:checked ~ ul {
-      display: block; }
+      display: block;
+      padding-top: 60px; }
     body header ul {
-      position: relative;
-      top: 60px;
       display: none;
       width: 100%;
-      min-height: 300px;
+      min-height: 240px;
       background-color: #28b078; }
       body header ul li:hover, body header ul :active {
         background-color: #36c388; } }
@@ -349,6 +352,46 @@ body {
         /* Opera */ }
     body .main2 .container-fluid .column2_box .bill:hover .transform {
       display: block; }
+  body .main3 {
+    background-color: #fafafa; }
+    body .main3 img {
+      width: 100%;
+      height: 100%;
+      z-index: 20; }
+    body .main3 .column {
+      color: #1ba36e; }
+      body .main3 .column a {
+        color: black; }
+    body .main3 .container-fluid .main-left {
+      background-color: white;
+      box-shadow: 0 0 5px 0 #9b9c9d; }
+      body .main3 .container-fluid .main-left h4 {
+        margin: 0;
+        border-bottom: #dedede 1px solid; }
+      body .main3 .container-fluid .main-left .sidebar {
+        color: #26a26f; }
+        body .main3 .container-fluid .main-left .sidebar span {
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border: #f3aa4b 1px solid; }
+        body .main3 .container-fluid .main-left .sidebar p:hover {
+          color: #f3aa4b; }
+        body .main3 .container-fluid .main-left .sidebar p:hover span {
+          background-color: #f9cf99; }
+    body .main3 .container-fluid .main-right {
+      color: #afafaf;
+      background-color: white;
+      box-shadow: 0 0 5px 0 #9b9c9d; }
+      body .main3 .container-fluid .main-right .right_box {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: #dedede 1px solid; }
+        body .main3 .container-fluid .main-right .right_box .logo21 {
+          min-width: 101px;
+          min-height: 92px;
+          background: url("14.png") -390px -10px; }
   body footer {
     background-color: #28b078; }
     @media (max-width: 992px) {

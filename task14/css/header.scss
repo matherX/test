@@ -1,4 +1,9 @@
 header{
+  p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
   .column{
     @include flex();
     color: #28b078;
