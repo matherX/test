@@ -56,7 +56,7 @@ body {
   body header label {
     position: absolute;
     top: 40px;
-    right: 10%;
+    right: 11%;
     width: 40px;
     height: 40px;
     background-color: #47d197; }
@@ -257,9 +257,6 @@ body {
         box-shadow: 0 0 5px 0 #9b9c9d; }
   body .main2 {
     background-color: #fafafa; }
-    @media (max-width: 768px) {
-      body .main2 .text {
-        width: 100%; } }
     body .main2 .column {
       color: #1ba36e;
       border-bottom: #dedede 1px solid; }
@@ -302,6 +299,10 @@ body {
           align-items: center;
           padding: 10px;
           width: 50%; }
+          body .main2 .container-fluid .column2_box .bill .line .cut p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
           body .main2 .container-fluid .column2_box .bill .line .cut .logo20 {
             width: 12px;
             height: 11px;
@@ -416,8 +417,15 @@ body {
         width: 50px;
         margin: 0;
         color: #a1a0a2; }
-        body footer .friendlink ul li:hover {
-          border-bottom: #28b078 2px solid; }
+        body footer .friendlink ul li {
+          height: 25px; }
+        body footer .friendlink ul li:hover .bar {
+          position: relative;
+          left: -20px;
+          display: block;
+          width: 70px;
+          height: 2px;
+          background-color: #28b078; }
     body footer .container-fluid .column_box {
       display: flex;
       justify-content: space-between;

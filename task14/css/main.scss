@@ -176,11 +176,6 @@
 }
 .main2{
   background-color: #fafafa;
-  @media (max-width:768px){
-    .text{
-      width: 100%;
-    }
-  }
   .column{
     color: #1ba36e;
     border-bottom: #dedede $border;
@@ -229,6 +224,11 @@
             @include flex(flex-start);
             padding: 10px;
             width: 50%;
+            p{
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
             .logo20{
               @include circle(12px,11px,-470px -357px);
             }

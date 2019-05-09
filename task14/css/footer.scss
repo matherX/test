@@ -21,8 +21,16 @@ footer{
       width: 50px;
       margin: 0;
       color: #a1a0a2;
-      li:hover{
-        border-bottom: #28b078 2px solid;
+      li{
+        height: 25px;
+      }
+      li:hover .bar{
+        position: relative;
+        left: -20px;
+        display: block;
+        width: 70px;
+        height: 2px;
+        background-color: #28b078;
       }
     }
   }
