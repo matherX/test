@@ -8,6 +8,7 @@ body {
     align-items: center;
     color: #28b078; }
     body header .column .box {
+      min-width: 70px;
       display: flex;
       justify-content: space-between;
       align-items: center; }
@@ -196,8 +197,7 @@ body {
           box-shadow: 0 0 5px 0 #9b9c9d; }
       body .main1 .container-fluid .column .logo8 {
         min-width: 24px;
-        width: 0;
-        height: 23px;
+        min-height: 23px;
         background: url("14.png") -455px -223px; }
     body .main1 .container-fluid .col_box {
       display: flex;
@@ -252,6 +252,103 @@ body {
           background: url("14.png") -161px -288px; }
       body .main1 .container-fluid .column2 .column2_box:hover {
         box-shadow: 0 0 5px 0 #9b9c9d; }
+  body .main2 {
+    background-color: #fafafa; }
+    @media (max-width: 768px) {
+      body .main2 .text {
+        width: 100%; } }
+    body .main2 .column {
+      color: #1ba36e;
+      border-bottom: #dedede 1px solid; }
+      body .main2 .column a {
+        color: black; }
+    body .main2 .container-fluid h4 {
+      margin: 0;
+      border-bottom: #dedede 1px solid; }
+    body .main2 .container-fluid .text {
+      color: #6b6b6b; }
+    body .main2 .container-fluid a:hover, body .main2 .container-fluid a:visited, body .main2 .container-fluid a:link, body .main2 .container-fluid a:active {
+      text-decoration: none;
+      color: #6b6b6b; }
+    body .main2 .container-fluid .text:hover {
+      color: white;
+      background-color: #1ba36e; }
+    body .main2 .container-fluid .column2_box table {
+      table-layout: fixed; }
+    body .main2 .container-fluid .column2_box tr {
+      word-wrap: break-word; }
+    body .main2 .container-fluid .column2_box td, body .main2 .container-fluid .column2_box th {
+      padding: 0; }
+    body .main2 .container-fluid .column2_box .bill {
+      background-color: white;
+      box-shadow: 0 0 5px 0 #9b9c9d; }
+      body .main2 .container-fluid .column2_box .bill .line {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        border-bottom: #dedede 1px solid; }
+        body .main2 .container-fluid .column2_box .bill .line .logo19 {
+          display: block;
+          min-width: 104px;
+          min-height: 104px;
+          background: url("14.png") -161px -162px; }
+        body .main2 .container-fluid .column2_box .bill .line .cut {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 10px;
+          width: 50%; }
+          body .main2 .container-fluid .column2_box .bill .line .cut .logo20 {
+            width: 12px;
+            height: 11px;
+            background: url("14.png") -470px -357px; }
+          body .main2 .container-fluid .column2_box .bill .line .cut .hue {
+            color: red; }
+        body .main2 .container-fluid .column2_box .bill .line .cut:nth-of-type(2) {
+          border-left: #dedede 1px solid; }
+      body .main2 .container-fluid .column2_box .bill .line1 {
+        width: 100%; }
+        body .main2 .container-fluid .column2_box .bill .line1 .cut1 {
+          width: 40%;
+          border-right: #dedede 1px solid;
+          border-bottom: #dedede 1px solid; }
+        body .main2 .container-fluid .column2_box .bill .line1 .cut2 {
+          width: 60%;
+          padding: 10px;
+          border-bottom: #dedede 1px solid; }
+      body .main2 .container-fluid .column2_box .bill .transform {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.82);
+        transition: width 2s, height 2s;
+        -moz-transition: width 2s, height 2s, -moz-transform 2s;
+        /* Firefox 4 */
+        -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+        /* Safari and Chrome */
+        -o-transition: width 2s, height 2s, -o-transform 2s; }
+        body .main2 .container-fluid .column2_box .bill .transform .white {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 80%;
+          height: 100%;
+          color: white; }
+      body .main2 .container-fluid .column2_box .bill .transform:hover {
+        transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        /* Firefox 4 */
+        -webkit-transform: rotate(360deg);
+        /* Safari and Chrome */
+        -o-transform: rotate(360deg);
+        /* Opera */ }
+    body .main2 .container-fluid .column2_box .bill:hover .transform {
+      display: block; }
   body footer {
     background-color: #28b078; }
     @media (max-width: 992px) {

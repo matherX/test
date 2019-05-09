@@ -13,6 +13,11 @@ body {
     height: $height;
     background: url("14.png") $site;
   }
+  @mixin circle1($width:24px,$height:24px,$site:-290px -109px) {
+    min-width: $width;
+    min-height: $height;
+    background: url("14.png") $site;
+  }
   @import "./css/header";
   @import "./css/main";
   @import "./css/footer";

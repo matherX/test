@@ -3,6 +3,7 @@ header{
     @include flex();
     color: #28b078;
     .box{
+      min-width: 70px;
       @include flex();
       .logo1{
         @include circle(20px,19px,-392px -357px);
