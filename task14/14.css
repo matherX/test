@@ -2,85 +2,85 @@ body {
   margin: 0; }
   body p {
     margin: 0; }
-  body .header1 .column {
+  body header .column {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #28b078; }
-    body .header1 .column .box {
+    body header .column .box {
       display: flex;
       justify-content: space-between;
       align-items: center; }
-      body .header1 .column .box .logo1 {
+      body header .column .box .logo1 {
         width: 20px;
         height: 19px;
         background: url("14.png") -392px -357px; }
-      body .header1 .column .box .logo2 {
+      body header .column .box .logo2 {
         width: 20px;
         height: 19px;
         background: url("14.png") -431px -357px; }
-      body .header1 .column .box .logo3 {
+      body header .column .box .logo3 {
         width: 20px;
         height: 19px;
         background: url("14.png") -353px -357px; }
-  body .header1 input[type="checkbox"] {
+  body header input[type="checkbox"] {
     display: none; }
   @media (max-width: 767px) {
-    body .header1 input[type="checkbox"]:checked ~ ul {
+    body header input[type="checkbox"]:checked ~ ul {
       display: block; }
-    body .header1 ul {
+    body header ul {
       position: relative;
       top: 60px;
       display: none;
       width: 100%;
       min-height: 300px;
       background-color: #28b078; }
-      body .header1 ul li:hover, body .header1 ul :active {
+      body header ul li:hover, body header ul :active {
         background-color: #36c388; } }
   @media (min-width: 768px) {
-    body .header1 .column1 {
+    body header .column1 {
       float: right;
       width: 240px;
       padding-right: 10%;
       display: flex;
       justify-content: space-between;
       align-items: center; }
-      body .header1 .column1 li:hover, body .header1 .column1 :active {
+      body header .column1 li:hover, body header .column1 :active {
         border-bottom: white 5px solid; }
-    body .header1 label {
+    body header label {
       display: none; } }
-  body .header1 label {
+  body header label {
     position: absolute;
     top: 40px;
     right: 10%;
     width: 40px;
     height: 40px;
     background-color: #47d197; }
-    body .header1 label span {
+    body header label span {
       display: block;
       width: 24px;
       height: 3px;
       background-color: #308863; }
-  body .header1 nav {
+  body header nav {
     min-height: 60px;
     background-color: #28b078; }
-    body .header1 nav .logo4 {
+    body header nav .logo4 {
       position: absolute;
       top: 37.5px;
       left: 10%;
       width: 120px;
       height: 45px;
       background: url("14.png") -312px -288px; }
-    body .header1 nav ul {
+    body header nav ul {
       margin: 0;
       padding: 0;
       color: white;
       list-style-type: none; }
-      body .header1 nav ul li {
+      body header nav ul li {
         width: 100%;
         height: 60px;
         box-sizing: border-box; }
-        body .header1 nav ul li a {
+        body header nav ul li a {
           text-decoration: none !important;
           color: white !important; }
   body .main1 {
@@ -148,92 +148,57 @@ body {
         border-right: white 3px solid;
         border-bottom: white 3px solid;
         transform: rotate(-45deg); }
-    @media (max-width: 767px) {
-      body .main1 .box {
-        width: 100%; }
-      body .main1 .column {
-        width: 100%; }
-        body .main1 .column .logo8 {
-          display: none; } }
-    @media (min-width: 768px) and (max-width: 1439px) {
-      body .main1 .content {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap; }
-        body .main1 .content .box {
-          width: 50%; }
-        body .main1 .content .box:nth-of-type(4) {
-          border-left: 1px dashed; }
-      body .main1 .column {
-        width: 50%; }
-        body .main1 .column .logo8:nth-of-type(even) {
-          display: none; } }
+    @media (min-width: 768px) {
+      body .main1 .box:nth-of-type(4) {
+        border-left: 1px dashed; } }
     @media (min-width: 1440px) {
-      body .main1 .content {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap; }
-        body .main1 .content .box {
-          width: 25%; }
-        body .main1 .content .box:nth-of-type(4) {
-          border-left: 1px dashed; }
-      body .main1 .column {
-        width: 25%; }
-        body .main1 .column .logo8:nth-of-type(3n+3) {
-          display: block;
-          border: black 1px solid; } }
-    body .main1 .content .box {
+      body .main1 .column2_box {
+        width: 20%; } }
+    body .main1 .container-fluid .box {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       height: 180px;
       box-sizing: border-box; }
-      body .main1 .content .box .logo4 {
+      body .main1 .container-fluid .box .logo4 {
         width: 32px;
         height: 47px;
         background: url("14.png") -301px -357px; }
-      body .main1 .content .box .logo5 {
+      body .main1 .container-fluid .box .logo5 {
         width: 45px;
         height: 36px;
         background: url("14.png") -390px -223px; }
-      body .main1 .content .box .logo6 {
+      body .main1 .container-fluid .box .logo6 {
         width: 39px;
         height: 41px;
         background: url("14.png") -452px -288px; }
-      body .main1 .content .box .green {
+      body .main1 .container-fluid .box .green {
         color: #1ba36e; }
-        body .main1 .content .box .green .logo7 {
+        body .main1 .container-fluid .box .green .logo7 {
           display: inline-block;
           width: 10px;
           height: 10px;
           background: url("14.png") -10px -458px; }
-    body .main1 .content1 {
+    body .main1 .container-fluid h4 {
+      width: 100%; }
+    body .main1 .container-fluid .column {
       display: flex;
-      justify-content: center;
-      align-items: none;
-      flex-wrap: wrap; }
-      body .main1 .content1 h4 {
-        width: 100%; }
-      body .main1 .content1 .column {
+      justify-content: space-between;
+      align-items: center; }
+      body .main1 .container-fluid .column div {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center; }
-        body .main1 .content1 .column div {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center; }
-          body .main1 .content1 .column div .circle {
-            display: inline-block;
-            min-width: 45px;
-            color: #1ba36e;
-            box-shadow: 0 0 5px 0 #9b9c9d; }
-        body .main1 .content1 .column .logo8 {
-          width: 24px;
-          height: 23px;
-          background: url("14.png") -455px -223px; }
+        body .main1 .container-fluid .column div .circle {
+          min-width: 45px;
+          color: #1ba36e;
+          box-shadow: 0 0 5px 0 #9b9c9d; }
+      body .main1 .container-fluid .column .logo8 {
+        min-width: 24px;
+        width: 0;
+        height: 23px;
+        background: url("14.png") -455px -223px; }
     body .main1 .container-fluid .col_box {
       display: flex;
       justify-content: center;
@@ -287,52 +252,48 @@ body {
           background: url("14.png") -161px -288px; }
       body .main1 .container-fluid .column2 .column2_box:hover {
         box-shadow: 0 0 5px 0 #9b9c9d; }
-  body .footer1 {
+  body footer {
     background-color: #28b078; }
     @media (max-width: 992px) {
-      body .footer1 .friendlink_box:nth-of-type(2) {
+      body footer .friendlink_box:nth-of-type(2) {
         display: flex;
         justify-content: none;
         align-items: flex-end;
         flex-direction: column; } }
     @media (min-width: 992px) {
-      body .footer1 .friendlink_box {
+      body footer .friendlink_box {
         display: flex;
         justify-content: space-between;
         align-items: center; }
-      body .footer1 .column {
+      body footer .column_box:nth-of-type(3) {
         display: flex;
         justify-content: space-between;
-        align-items: none; }
-        body .footer1 .column .column_box:nth-of-type(3) {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          flex-direction: column; } }
-    body .footer1 .friendlink {
+        align-items: center;
+        flex-direction: column; } }
+    body footer .friendlink {
       background-color: white; }
-      body .footer1 .friendlink ul {
+      body footer .friendlink ul {
         width: 50px;
-        margin: 0; }
-        body .footer1 .friendlink ul li:hover {
+        margin: 0;
+        color: #a1a0a2; }
+        body footer .friendlink ul li:hover {
           border-bottom: #28b078 2px solid; }
-    body .footer1 .column {
+    body footer .container-fluid .column_box {
+      display: flex;
+      justify-content: space-between;
+      align-items: none;
+      flex-direction: column;
+      height: 120px;
       color: white; }
-      body .footer1 .column .column_box {
-        display: flex;
-        justify-content: space-between;
-        align-items: none;
-        flex-direction: column;
-        height: 120px; }
-        body .footer1 .column .column_box .logo18 {
-          display: block;
-          width: 69px;
-          height: 69px;
-          background: url("14.png") -212px -357px; }
-        body .footer1 .column .column_box .note a:nth-of-type(1), body .footer1 .column .column_box .note a:nth-of-type(2) {
-          border-right: white 2px solid; }
-        body .footer1 .column .column_box a:hover {
-          border-bottom: white 1px solid; }
+      body footer .container-fluid .column_box .logo18 {
+        display: block;
+        width: 69px;
+        height: 69px;
+        background: url("14.png") -212px -357px; }
+      body footer .container-fluid .column_box .note a:nth-of-type(1), body footer .container-fluid .column_box .note a:nth-of-type(2) {
+        border-right: white 2px solid; }
+      body footer .container-fluid .column_box a:hover {
+        border-bottom: white 1px solid; }
   body .copyright {
     color: white;
     background-color: #28b078;
