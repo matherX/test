@@ -355,6 +355,12 @@ body {
       display: block; }
   body .main3 {
     background-color: #fafafa; }
+    @media (max-width: 768px) {
+      body .main3 .right_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: none;
+        flex-direction: column; } }
     body .main3 img {
       width: 100%;
       height: 100%;
