@@ -33,6 +33,7 @@ body {
   input[type="checkbox"]:checked~ .content{
     right: -450px;
     margin-left: 450px;
+    width: 100%;
     min-width: 320px;
     max-width: 768px;
     box-shadow: -3px -3px 16px 0 #9b9c9d;
@@ -114,6 +115,7 @@ body {
           top: -262px;
           display: block;
           float: right;
+          margin-right: 5%;
           @include circle(21px,42px,0,-293px -10px);
         }
       }
