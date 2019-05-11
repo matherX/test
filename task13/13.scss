@@ -1,5 +1,7 @@
 body {
-  margin: 0;
+  margin: auto;
+  min-width: 320px;
+  max-width: 768px;
   height: 100%;
   p, ul, button, a{
     margin: 0;
@@ -26,11 +28,13 @@ body {
   }
   //页面一：版本选择
   input[type="checkbox"]:checked~ label{
-    margin-left: 70vw;
+    margin-left: 460px;
   }
   input[type="checkbox"]:checked~ .content{
-    right: -70vw;
-    margin-left: 70vw;
+    right: -450px;
+    margin-left: 450px;
+    min-width: 320px;
+    max-width: 768px;
     box-shadow: -3px -3px 16px 0 #9b9c9d;
   }
   input[type="checkbox"] {display: none;}
@@ -50,13 +54,13 @@ body {
   }
   input[type="checkbox"]:checked~ nav{
     top: 0;
-    left: 0;
+    display: block;
   }
   nav{
     position: absolute;
     top: 0;
-    left: -70vw;
-    width: 70vw;
+    display: none;
+    width: 450px;
     height: 100%;
     .column {
       @include flex(flex);
@@ -79,7 +83,8 @@ body {
     }
   }
   .content{
-    min-width: calc(100vw - 5px);
+    min-width: 320px;
+    max-width: 768px;
     height: 100%;
     .header1{
       width: 100%;
@@ -100,15 +105,15 @@ body {
           border-bottom: #f8b547  $border;
         }
         .btn{
-          width: 70vw;
+          width: 70%;
           color: white;
           background-color: #6dd2e9;
         }
         .logo5{
+          position: relative;
+          top: -262px;
           display: block;
-          position: absolute;
-          top: 350px;
-          margin-left: 86%;
+          float: right;
           @include circle(21px,42px,0,-293px -10px);
         }
       }
@@ -133,6 +138,8 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    max-width: 768px;
+    min-width: 320px;
     height: 120px;
     color: white;
     .column{
@@ -182,18 +189,18 @@ body {
           left: -5px;
           width: calc(100% + 10px);
           height: 23px;
-          .logo7{
-            @include circle(23px,23px,0,-139px -243px);
-          }
-          .logo8{
-            @include circle(23px,23px,0,-182px -243px);
-          }
-          .logo9{
-            @include circle(23px,23px,0,-96px -243px);
-          }
-          .logo10{
-            @include circle(23px,23px,0,-10px -243px);
-          }
+        }
+        .logo7{
+          @include circle(23px,23px,0,-139px -243px);
+        }
+        .logo8{
+          @include circle(23px,23px,0,-182px -243px);
+        }
+        .logo9{
+          @include circle(23px,23px,0,-96px -243px);
+        }
+        .logo10{
+          @include circle(23px,23px,0,-10px -243px);
         }
       }
       .box:hover .affair{
@@ -206,6 +213,8 @@ body {
     position: fixed;
     bottom: 0;
     width: calc(100% - 40px);
+    max-width: 728px;
+    min-width: 280px;
     height: 100px;
     background-color: #34beed;
     border-top: white $border;
@@ -222,6 +231,8 @@ body {
     top: 0;
     @include flex(space-between);
     width: calc(100% - 20px);
+    max-width: 748px;
+    min-width: 300px;
     height: 60px;
     background-color: #34beed;
     color: white;
@@ -255,9 +266,9 @@ body {
           margin: 0;
           padding: 0;
           list-style-type: none;
-          li{
-            width: 33%;
-          }
+        }
+        li{
+          width: 33%;
         }
       }
     }
@@ -268,9 +279,9 @@ body {
         .box{
           height: 31px;
           vertical-align:bottom;
-          .black{
-            color: #5d5e5f;
-          }
+        }
+        .black{
+          color: #5d5e5f;
         }
       }
       .column1{
@@ -284,6 +295,8 @@ body {
     bottom: 0;
     @include flex(space-between);
     width: calc(100% - 40px);
+    max-width: 728px;
+    min-width: 280px;
     height: 70px;
     background: rgba(52,189,222,0.5);
     .btn{
