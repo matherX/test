@@ -16,8 +16,8 @@ body {
   }
   $border: 1px solid;
   @mixin width($min:320px,$max:768px){
-    min-width: 320px;
-    max-width: 768px;
+    min-width: $min;
+    max-width: $max;
   }
   @mixin flex($justify:center,$align:center){
     display: flex;
@@ -215,7 +215,7 @@ body {
     position: fixed;
     bottom: 0;
     width: calc(100% - 40px);
-    @include width(728px,280px);
+    @include width(280px,728px);
     height: 100px;
     background-color: #34beed;
     border-top: white $border;
