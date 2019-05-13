@@ -242,7 +242,7 @@ body {
     top: 0;
     @include flex(space-between);
     width: calc(100% - 20px);
-    @include width(748px,300px);
+    @include width(300px,748px);
     height: 60px;
     background-color: #34beed;
     color: white;
@@ -305,7 +305,7 @@ body {
     bottom: 0;
     @include flex(space-between);
     width: calc(100% - 40px);
-    @include width(728px,280px);
+    @include width(280px,728px);
     height: 70px;
     background: rgba(52,189,222,0.5);
     .btn{
