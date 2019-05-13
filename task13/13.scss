@@ -186,10 +186,11 @@ body{
     }
     .column {
       @include flex(space-between);
+      margin-bottom: 10%;
+      padding-top: 5%;
       .box {
         position: relative;
         width: 25%;
-        margin-bottom: 20%;
         background-color: #f3c881;
         border: white 5px solid;
         p{
