@@ -2,7 +2,8 @@ body {
   min-width: 320px;
   max-width: 768px;
   height: 100%;
-  margin: auto; }
+  margin: auto;
+  overflow: hidden; }
   body p, body ul, body button, body a {
     margin: 0;
     overflow: hidden;
@@ -122,9 +123,9 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10;
     min-width: 320px;
     max-width: 768px;
-    height: 120px;
     color: white; }
     body .header2 .column {
       display: flex;
@@ -142,22 +143,6 @@ body {
         height: 27px;
         border: #6dd2e9 0 solid;
         background: url("13.png") -226px -184px; }
-    body .header2 .column1 {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 60px;
-      color: black;
-      background-color: #BAE9F4; }
-      body .header2 .column1 .btn1 {
-        right: 10px;
-        width: 39px;
-        height: 39px;
-        border: #6dd2e9 0 solid;
-        background: url("13.png") -10px -184px;
-        overflow: hidden; }
-        body .header2 .column1 .btn1 audio {
-          opacity: 0; }
   body .main2 {
     display: flex;
     justify-content: space-between;
@@ -165,6 +150,28 @@ body {
     flex-direction: column;
     height: 100%;
     background-color: #34beed; }
+    body .main2 .column1 {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+      color: black;
+      background-color: #BAE9F4; }
+      body .main2 .column1 .btn1 {
+        right: 10px;
+        width: 39px;
+        height: 39px;
+        border: #6dd2e9 0 solid;
+        background: url("13.png") -10px -184px;
+        overflow: hidden; }
+        body .main2 .column1 .btn1 audio {
+          position: absolute;
+          top: -7px;
+          left: -7px;
+          opacity: 0; }
+    body .main2 .white {
+      color: white; }
     body .main2 .column {
       display: flex;
       justify-content: space-between;

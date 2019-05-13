@@ -3,6 +3,7 @@ body {
   max-width: 768px;
   height: 100%;
   margin: auto;
+  overflow: hidden;
   p, ul, button, a{
     margin: 0;
     overflow: hidden;
@@ -141,8 +142,8 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10;
     @include width();
-    height: 120px;
     color: white;
     .column{
       @include flex(space-between);
@@ -155,7 +156,14 @@ body {
         @include circle(27px,27px,0,-226px -184px);
       }
     }
+  }
+  .main2{
+    @include flex(space-between,none);
+    flex-direction: column;
+    height: 100%;
+    background-color: #34beed;
     .column1{
+      position: relative;
       @include flex(space-between);
       height: 60px;
       color: black;
@@ -165,16 +173,16 @@ body {
         @include circle(39px,39px,0,-10px -184px);
         overflow: hidden;
         audio{
+          position: absolute;
+          top: -7px;
+          left: -7px;
           opacity: 0;
         }
       }
     }
-  }
-  .main2{
-    @include flex(space-between,none);
-    flex-direction: column;
-    height: 100%;
-    background-color: #34beed;
+    .white{
+      color: white;
+    }
     .column{
       @include flex(space-between);
       .box{
