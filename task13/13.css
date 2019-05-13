@@ -1,9 +1,11 @@
+.body1 {
+  overflow: hidden; }
+
 body {
   min-width: 320px;
   max-width: 768px;
   height: 100%;
-  margin: auto;
-  overflow: hidden; }
+  margin: auto; }
   body p, body ul, body button, body a {
     margin: 0;
     overflow: hidden;
