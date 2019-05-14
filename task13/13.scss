@@ -161,6 +161,8 @@ body{
     }
   }
   .main2 {
+    @include flex(space-between,none);
+    flex-direction: column;
     height: 100%;
     background-color: #34beed;
     .column1-box {
