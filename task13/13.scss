@@ -161,12 +161,8 @@ body{
     }
   }
   .main2 {
-    display: flex;
-    align-content: flex-start;
-    flex-direction: column;
-    height: 100vh;
-    min-height: 812px;
     background-color: #34beed;
+    border: #34beed $border;
     .column1-box {
       position: relative;
       @include flex(space-between);
@@ -190,10 +186,10 @@ body{
     }
     .column {
       @include flex(space-between);
+      margin-bottom: 80px;
       .box {
         position: relative;
         width: 25%;
-        margin-bottom: 80px;
         background-color: #f3c881;
         border: white 5px solid;
         p{
