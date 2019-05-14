@@ -144,6 +144,9 @@ body {
       height: 27px;
       border: #6dd2e9 0 solid;
       background: url("13.png") -226px -184px; }
+  @media (min-height: 992px) {
+    body .main2 {
+      height: 100vh; } }
   body .main2 {
     background-color: #34beed;
     border: #34beed 1px solid; }

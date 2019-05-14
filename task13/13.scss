@@ -160,6 +160,11 @@ body{
       @include circle(27px, 27px, 0, -226px -184px);
     }
   }
+  @media (min-height:992px){
+    .main2{
+      height: 100vh;
+    }
+  }
   .main2 {
     background-color: #34beed;
     border: #34beed $border;
