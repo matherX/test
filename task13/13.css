@@ -146,10 +146,10 @@ body {
       background: url("13.png") -226px -184px; }
   body .main2 {
     display: flex;
-    justify-content: space-between;
-    align-items: none;
+    align-content: flex-start;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
+    min-height: 812px;
     background-color: #34beed; }
     body .main2 .column1-box {
       position: relative;
@@ -176,25 +176,23 @@ body {
     body .main2 .column {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10%;
-      padding-top: 5%; }
+      align-items: center; }
       body .main2 .column .box {
         position: relative;
         width: 25%;
+        margin-bottom: 80px;
         background-color: #f3c881;
         border: white 5px solid; }
         body .main2 .column .box p {
-          padding: 28% 0; }
+          padding: 30% 0; }
         body .main2 .column .box .order {
           color: white;
           background-color: #82af9b; }
         body .main2 .column .box .affair {
           position: absolute;
-          bottom: -50%;
+          bottom: -50px;
           left: -5px;
-          width: calc(100% + 10px);
-          height: 23px; }
+          width: calc(100% + 10px); }
         body .main2 .column .box .logo7 {
           width: 23px;
           height: 23px;
