@@ -401,7 +401,7 @@ body {
           background: url("14.png") -390px -10px; }
   body footer {
     background-color: #28b078; }
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
       body footer .friendlink_box:nth-of-type(2) {
         display: flex;
         justify-content: none;
@@ -420,16 +420,18 @@ body {
     body footer .friendlink {
       background-color: white; }
       body footer .friendlink ul {
-        width: 50px;
+        min-width: 64px;
         margin: 0;
         color: #a1a0a2; }
         body footer .friendlink ul li {
-          height: 25px; }
-        body footer .friendlink ul li:hover .bar {
           position: relative;
+          height: 30px; }
+        body footer .friendlink ul li:hover .bar {
+          position: absolute;
+          top: 26px;
           left: -20px;
           display: block;
-          width: 70px;
+          width: 85px;
           height: 2px;
           background-color: #28b078; }
     body footer .container-fluid .column_box {
