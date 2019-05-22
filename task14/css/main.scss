@@ -52,8 +52,7 @@
       }
     }
     .img{
-      width: calc(80% + 15px);
-      margin: 0 10%;
+      width: 100vw;
     }
     .col_box{
       @include flex(center);

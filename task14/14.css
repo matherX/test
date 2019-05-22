@@ -112,7 +112,7 @@ body {
     body header .viewport .num {
       position: absolute;
       bottom: 3%;
-      left: calc(50% - 17px);
+      left: calc(50% - 30px);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -250,7 +250,7 @@ body {
       body .main1 .viewport .num {
         position: absolute;
         bottom: 3%;
-        left: calc(50% - 17px);
+        left: calc(50% - 30px);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -354,8 +354,7 @@ body {
         min-height: 23px;
         background: url("14.png") -455px -223px; }
     body .main1 .container-fluid .img {
-      width: calc(80% + 15px);
-      margin: 0 10%; }
+      width: 100vw; }
     body .main1 .container-fluid .col_box {
       display: flex;
       justify-content: center;
