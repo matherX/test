@@ -16,5 +16,5 @@
 .fix{*zoom:1;}.fix:after,.fix:before{display:block; content:"clear"; height:0; clear:both; overflow:hidden; visibility:hidden;}.z{_zoom:1;}
 .corner{position: absolute;right: 14px;width: 10px;height: 10px;border-right: #6dd2e9 3px solid;border-bottom: #6dd2e9 3px solid;transform: rotate(-45deg);-moz-transform: rotate(-45deg);-webkit-transform: rotate(-45deg);-o-transform: rotate(-45deg);}
 .corner1{position: relative;top: -36px;float: right;width: 13px;height: 13px;border-right: #a9a9a9 3px solid;border-bottom: #a9a9a9 3px solid;transform: rotate(-45deg);-moz-transform: rotate(-45deg);-webkit-transform: rotate(-45deg);-o-transform: rotate(-45deg);}
-.br5{border-radius: 5px;}.br10{border-radius: 10px;}.brs5{border-radius: 5%;}.brs10{border-radius: 10%;}.brs20{border-radius: 20%;}.brs50{border-radius: 50%;}
+.br5{border-radius: 5px;}.br10{border-radius: 10px;}.brs5{border-radius: 5%;}.brs10{border-radius: 10%;}.brs20{border-radius: 20%;}.brs50{border-radius: 50%;}.bs{box-shadow: 0 0 5px 0 #9b9c9d;}
 .remind{z-index: 10;width: 0;margin-bottom: 10px;border-left: 7px solid transparent;border-top: 15px solid #bae9f4;border-right: 7px solid transparent;}

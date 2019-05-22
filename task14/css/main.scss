@@ -1,83 +1,6 @@
 .main1{
   background-color: #fafafa;
-  ul{
-    position: relative;
-    top: -20px;
-    @include flex(center);
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    li{
-      display: block;
-      width: 10px;
-      height: 10px;
-      background-color: white;
-      box-shadow: 0 0 5px 0 #9b9c9d;
-    }
-    li:hover{
-      background-color: #1ba36e;
-    }
-  }
-  //轮播图
-  .viewport {
-    /*position: relative;*/
-    overflow: hidden;
-    .wrap {
-      position: relative;
-      width: 300vw;
-      overflow: hidden;
-      animation: carousel linear 10s infinite 10s normal;
-      img {
-        display: inline-block;
-        width: 100vw;
-        height: auto;
-        float: left;
-      }
-      @keyframes carousel {
-        0% {
-          left: 0;
-        }
-        20% {
-          left: -0vw;
-        }
-        40% {
-          left: -100vw;
-        }
-        60% {
-          left: -100vw;
-        }
-        80% {
-          left: -200vw;
-        }
-        100% {
-          left: -200vw;
-        }
-      }
-    }
-    span{
-      display: block;
-      width: 15px;
-      height: 15px;
-    }
-    .left-btn{
-      position: relative;
-      top: -18vw;
-      float: left;
-      z-index: 1;
-      border-top: white 3px solid;
-      border-left: white 3px solid;
-      transform: rotate(-45deg);
-    }
-    .right-btn{
-      position: relative;
-      top: -18vw;
-      float: right;
-      z-index: 1;
-      border-right: white 3px solid;
-      border-bottom: white 3px solid;
-      transform: rotate(-45deg);
-    }
-  }
+  @import "module.scss";
   @media (min-width:768px){
     .box:nth-of-type(4){
         border-left: 1px dashed;
@@ -127,6 +50,10 @@
       .logo8{
         @include circle1(24px,23px,-455px -223px);
       }
+    }
+    .img{
+      width: calc(80% + 15px);
+      margin: 0 10%;
     }
     .col_box{
       @include flex(center);

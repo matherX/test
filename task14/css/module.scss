@@ -7,7 +7,7 @@ input[type="checkbox"] {display: none;}
     display: block;
     padding-top: 60px;
   }
-  ul{
+  .column1{
     display: none;
     width: 100%;
     min-height: 240px;
@@ -68,5 +68,102 @@ nav {
         color: white !important;
       }
     }
+  }
+}
+//轮播图
+.viewport {
+  position: relative;
+  overflow: hidden;
+  .wrap {
+    position: relative;
+    width: 300vw;
+    overflow: hidden;
+    animation: carousel linear 15s infinite 5s normal;
+    img {
+      display: inline-block;
+      width: 100vw;
+      height: auto;
+      float: left;
+    }
+    @keyframes carousel {
+      0%, 33% {
+        left: 0;
+      }
+      34%, 67%{
+        left: -100vw;
+      }
+      68%, 100%{
+        left: -200vw;
+      }
+    }
+  }
+  .num{
+    position: absolute;
+    bottom: 3%;
+    left: calc(50% - 17px);
+    @include flex(center);
+    width: 60px;
+    margin: 0;
+    padding: 0;
+    li{
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      box-shadow: 0 0 5px 0 #9b9c9d;
+    }
+    .num{
+      .active{
+        background-color: #1ba36e;
+      }
+    }
+    li:hover{
+      background-color: #1ba36e;
+    }
+  }
+  /*远点变色跟随样式*/
+  li:nth-of-type(4){
+    position: absolute;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #1ba36e;
+    border-radius: 50%;
+    z-index: 10;
+    animation: ma linear 15s infinite 5s normal;
+  }
+  @keyframes  ma {
+    0%, 33% {
+      left: 5px;
+    }
+    34%, 67% {
+      left: 25px;
+    }
+    68%, 100% {
+      left: 45px;
+    }
+}
+  span{
+    display: block;
+    width: 15px;
+    height: 15px;
+  }
+  .left-btn{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: 1;
+    border-top: white 3px solid;
+    border-left: white 3px solid;
+    transform: rotate(-45deg);
+  }
+  .right-btn{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    z-index: 1;
+    border-right: white 3px solid;
+    border-bottom: white 3px solid;
+    transform: rotate(-45deg);
   }
 }
