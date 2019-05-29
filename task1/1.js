@@ -45,7 +45,7 @@ function random(){
 var z;
 function star(){
     clearInterval(z);//停止周期调用函数
-    z = setInterval("random()", 800);
+    z = setInterval("random()", 1000);
 }
 function stop(){
     clearInterval(z);//停止周期调用函数
