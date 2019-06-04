@@ -6,15 +6,20 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <link rel="stylesheet" href="13.css">
     <link rel="stylesheet" href="common.css">
+    <script>
+        function set(){
+            location.href = "js2.2.html";
+        }
+    </script>
 </head>
 <body class="body1">
 <input type="checkbox" id="menu">
-<label class="pl10" for="menu">
+<label class="pl10 abs" for="menu">
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
 </label>
-<nav>
+<nav class="abs dn">
     <div class="column pl10">
         <span class="logo1 brs50 mr10"></span>
         <p>公告</p>
@@ -41,24 +46,21 @@
     <main class="main1 pl20">
         <input class="searchInput mt20 tc lh50 f20" type="text" name="fname" placeholder="上次游戏：捉鬼猜词版">
         <div class="corner1 mr20"></div>
-        <div class="submenu mt20 tc">
+        <div class="submenu mt20 tc rel">
             <p class="column1 lh50 f20">捉鬼游戏</p>
-            <button type="button" class="btn lh60 mt20 mb20 f20"
-                    onclick="window.open('https://matherx.github.io/test/task13/13.2.html','_self')">简洁版</button>
-            <p>有1133个用户正在玩此游戏</p>
-            <button type="button" class="btn lh60 mt20 mb20 f20"
-                    onclick="window.open('https://matherx.github.io/test/task13/13.2.html','_self')">猜词版</button>
-            <p>有1133个用户正在玩此游戏</p>
-            <button type="button" class="btn lh60 mt20 mb20 f20"
-                    onclick="window.open('https://matherx.github.io/test/task13/13.2.html','_self')">白痴版</button>
-            <p>有1133个用户正在玩此游戏</p>
-            <div class="column2 mt20 mb20">
-                <span class="btn1 mr5 ml5"></span>
-                <span class="btn1 mr5 ml5"></span>
-                <span class="btn1 mr5 ml5"></span>
-                <span class="btn1 mr5 ml5"></span>
+            <div>
+                <button type="button" class="btn lh60 mt20 mb20 f20" onclick="set()">简洁版</button>
+                <p>有1133个用户正在玩此游戏</p>
+                <button type="button" class="btn lh60 mt20 mb20 f20">猜词版</button>
+                <p>有1133个用户正在玩此游戏</p>
+                <button type="button" class="btn lh60 mt20 mb20 f20">白痴版</button>
+                <p>有1133个用户正在玩此游戏</p>
             </div>
-            <span class="logo5"></span>
+            <ul class="column2 mt20 mb20 f10">
+                <li class="btn1 db mr5 ml5 lh14 brs50">1</li>
+                <li class="btn1 db mr5 ml5 lh14 brs50">2</li>
+            </ul>
+            <span class="logo5 abs"></span>
         </div>
     </main>
 </div>

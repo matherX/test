@@ -17,3 +17,4 @@
 .corner1{position: relative;top: -36px;float: right;width: 13px;height: 13px;border-right: #a9a9a9 3px solid;border-bottom: #a9a9a9 3px solid;transform: rotate(-45deg);-moz-transform: rotate(-45deg);-webkit-transform: rotate(-45deg);-o-transform: rotate(-45deg);}
 .br5{border-radius: 10px;}.brs5{border-radius: 5%;}.brs10{border-radius: 10%;}.brs20{border-radius: 20%;}.brs50{border-radius: 50%;}
 .remind{display:block;width: 0;margin-bottom: 10px;color:white;border-left: 7px solid transparent;border-top: 15px solid #bae9f4;border-right: 7px solid transparent;}
+.oln{outline:none;}
