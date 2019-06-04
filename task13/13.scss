@@ -102,6 +102,7 @@ body{
     width: 100%;
     @include width();
     height: 100vh;
+    min-height: 640px;
     background-color: #eff0f1;
     .box{
       @include flex(none);

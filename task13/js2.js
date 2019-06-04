@@ -17,10 +17,10 @@ function off() {
         $("#p2").text(civilian);
     }
     else if(a<4){
-        alert("入数过少，无法开始游戏")
+        alert("人数过少，无法开始游戏")
     }
     else{
-        alert("入数过多，请设置正确玩家数")
+        alert("人数过多，请设置正确玩家数")
     }
 }
 function slide(){
