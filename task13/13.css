@@ -88,6 +88,7 @@ body {
     min-width: 320px;
     max-width: 768px;
     height: 100vh;
+    min-height: 640px;
     background-color: #eff0f1; }
     body .content .box {
       display: flex;
