@@ -1,6 +1,10 @@
 function ter(){
     var a = document.getElementById("monitor").value;
     document.getElementById("count").value = a;
+}
+function allot(){
+    var a = document.getElementById("monitor").value;
+    document.getElementById("count").value = a;
     var killer= parseInt(a / 3);
     var civilian = a -killer;
     if(a<=18&&a>=4){
