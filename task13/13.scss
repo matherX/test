@@ -8,9 +8,11 @@ body{
   overflow-x: hidden;
   p, ul, button, a {
     margin: 0;
+    padding: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    list-style-type: none;
   }
   button {
     padding: 0;
@@ -257,6 +259,7 @@ body{
     @include width();
     color: white;;
     background-color: #34beed;
+    border-bottom: #FDFDFC $border;
     .btn {
       @include circle(29px, 30px, 0,'13.png', -177px -184px);
     }
@@ -277,7 +280,6 @@ body{
   }
   .main2 {
     background-color: #34beed;
-    border: #34beed $border;
     .column1-box {
       position: relative;
       @include flex(space-between);
@@ -392,7 +394,6 @@ body{
           height: 68px;
           margin: 0;
           padding: 0;
-          list-style-type: none;
         }
         li {
           width: 33%;
@@ -434,6 +435,63 @@ body{
       width: 48%;
       color: white;
       background-color: #f8b445;
+    }
+  }
+  .main4{
+    @include flex(none,center);
+    flex-direction: column;
+    height: calc(100vh - 61px);
+    background-color: #34beed;
+    border-top: #FDFDFC $border;
+    .box{
+      @include flex();
+      flex-direction: column;
+      width: 70%;
+      height: 60%;
+      padding: 0;
+      background-color: #FDEECC;
+      border: #FDFDFC 5px solid;
+      .box_h{
+        top: 105px;
+        left: calc(50% - 15px);
+        width: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #FDFDFC;
+        border: #FDEECC 2px solid;
+        border-radius: 50%;
+      }
+      .logo14{
+        @include circle(226px, 226px, 0,'js2.png', -10px -10px);
+      }
+      .logo15{
+        margin-left: calc(50% - 83.5px);
+        @include circle(167px, 167px, 0,'js2.png',-501px -10px);
+      }
+      .box_role{
+        width: 100%;
+      }
+      p{
+        display: none;
+        white-space: normal;
+      }
+      p:nth-child(2){
+        color: blue;
+      }
+      p:nth-child(3){
+        width: 100%;
+        color: #F56B81;
+        border-bottom: #FDFDFC $border;
+      }
+      p:nth-child(4){
+        color: #FCA000;
+      }
+    }
+    button{
+      width: 75%;
+      height: 8vh;
+      color: white;
+      background-color: #fab344;
     }
   }
 }
