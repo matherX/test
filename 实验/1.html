@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="1.css">
+    <link rel="stylesheet" href="框架.css">
+    <!--<style>-->
+        <!--div{-->
+            <!--display: flex;-->
+            <!--justify-content: space-around;-->
+            <!--margin-bottom: 20px;-->
+        <!--}-->
+        <!--span{-->
+            <!--min-width: 300px;-->
+            <!--height: 300px;-->
+        <!--}-->
+        <!--span:nth-child(1){-->
+            <!--border: blue 1px solid;-->
+        <!--}-->
+        <!--span:nth-child(2){-->
+            <!--border: red 1px solid;-->
+        <!--}-->
+        <!--span:nth-child(3){-->
+            <!--border: #1ba36e 1px solid;-->
+        <!--}-->
+    <!--</style>-->
+    <script>
+        var arr = [0,1,2,3,4,5,6,7,8,9];
+        function shuffle(arr){
+            var len = arr.length;
+            for(var i = 0; i < len - 1; i++){
+                var idx = Math.floor(Math.random() * (len - i));
+                var temp = arr[idx];
+                arr[idx] = arr[len - i - 1];
+                arr[len - i -1] = temp;
+            }
+            return arr;
+        }
+        // var res = new Array("");
+        // for(var i = 0; i < 1; i++){
+        //     var sorted = shuffle(arr.slice(0));
+        //     sorted.forEach(function(o,i){
+        //         res[i] += o;
+        //     });
+        // }
+        var res = new Array("");
+        for(var i = 0; i < 1000; i++){
+            var sorted = shuffle(arr.slice(0));
+            sorted.forEach(function(o,i){
+                res[i]= o;
+            });
+        }
+        console.log(res);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

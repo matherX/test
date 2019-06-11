@@ -1,0 +1,94 @@
+.bg-js2__2_ {
+    width: 91px; height: 91px;
+    background: url('css_sprites.png') -501px -312px;
+}
+
+x
+.bg-js2__3_ {
+    width: 195px; height: 194px;
+    background: url('css_sprites.png') -10px -256px;
+}
+
+x
+.bg-js2__4_ {
+    width: 196px; height: 193px;
+    background: url('css_sprites.png') -225px -256px;
+}
+
+x
+.bg-js2__5_ {
+    width: 22px; height: 26px;
+    background: url('css_sprites.png') -612px -377px;
+}
+
+x
+.bg-js2__6_ {
+    width: 167px; height: 167px;
+    background: url('css_sprites.png') -501px -10px;
+}
+
+x
+.bg-js2__7_ {
+    width: 226px; height: 226px;
+    background: url('css_sprites.png') -10px -10px;
+}
+
+x
+.bg-js2__8_ {
+    width: 91px; height: 90px;
+    background: url('css_sprites.png') -10px -470px;
+}
+
+x
+.bg-js2__9_ {
+    width: 27px; height: 19px;
+    background: url('css_sprites.png') -501px -423px;
+}
+
+x
+.bg-js2__10_ {
+    width: 85px; height: 48px;
+    background: url('css_sprites.png') -121px -470px;
+}
+
+x
+.bg-js2__11_ {
+    width: 23px; height: 45px;
+    background: url('css_sprites.png') -616px -197px;
+}
+
+x
+.bg-js2__12_ {
+    width: 23px; height: 45px;
+    background: url('css_sprites.png') -612px -312px;
+}
+
+x
+.bg-js2__13_ {
+    width: 27px; height: 27px;
+    background: url('css_sprites.png') -616px -262px;
+}
+
+x
+.bg-js2__14_ {
+    width: 95px; height: 95px;
+    background: url('css_sprites.png') -501px -197px;
+}
+
+x
+.bg-js2__15_ {
+    width: 225px; height: 225px;
+    background: url('css_sprites.png') -256px -10px;
+}
+.bg-js2£¨16£© {
+    width: 35px; height: 35px;
+    background: url('css_sprites.png') -616px -197px;
+}
+.bg-js2£¨17£© {
+    width: 19px; height: 31px;
+    background: url('css_sprites.png') -441px -321px;
+}
+.bg-js2£¨17£© {
+    width: 19px; height: 31px;
+    background: url('css_sprites.png') -441px -321px;
+}
