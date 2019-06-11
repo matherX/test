@@ -75,9 +75,8 @@ function put() {//发牌按钮
                 sessionStorage.res = sen;//转化后的字符串存入浏览器
                 sessionStorage.setItem('word1',q);//存入平民词组
                 sessionStorage.setItem('word2',w);//存入杀手词组
-                console.log(res);
             }
-            //location.href="js2.3.html"//循环结束跳转到下一页面
+            location.href="js2.3.html"//循环结束跳转到下一页面
         }
         else{
             alert("请设置杀手与水民的比例");
