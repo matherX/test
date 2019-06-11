@@ -41,6 +41,8 @@ function allot(){//点击事件
     }
     else{//判断i不等于小于net的长度则输出
         location.href="js2.4.html";//跳转下一个页面。
+        var res = JSON.stringify(net);
+        sessionStorage.net = res;
     }
     i+=0.5;
 }
