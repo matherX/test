@@ -40,7 +40,7 @@ function allot(){//点击事件
         $('.self').text("法官查看");//改变下一步提示信息为“法官查看”
     }
     else{//判断i不等于小于net的长度则输出
-        location.href="js2.4.html";//跳转下一个页面。
+        location.href="13.2.html";//跳转下一个页面。
         var res = JSON.stringify(net);
         sessionStorage.net = res;
     }

@@ -106,6 +106,7 @@ body{
     height: 100vh;
     min-height: 640px;
     background-color: #eff0f1;
+    //玩家人数配比页面
     .box{
       @include flex(none);
       .box-left{
@@ -232,21 +233,92 @@ body{
           padding: 0;
           color: white;
           @include flex();
-          .btn1 {
-            width: 14px;
-            height: 14px;
-            margin: 0 3px;
-            background-color: #9b9c9d;
-          }
-          .btn1:hover {
-            background-color: #6dd2e9;
-          }
+        }
+        .btn1 {
+          width: 14px;
+          height: 14px;
+          margin: 0 3px;
+          background-color: #9b9c9d;
+        }
+        .btn1:hover {
+          background-color: #6dd2e9;
         }
         .logo5 {
           top: calc(50% - 32px);
           right: 4%;
           @include circle(21px, 42px, 0,'13.png', -293px -10px);
         }
+      }
+    }
+  }
+  //游戏流程页面（法官台本）
+  .main_day{
+    width: calc(100% - 20px);
+    line-height: 50px;
+    margin: 10px;
+    color: #34beed;
+    background-color: white;
+    border: #bdbcbc $border;
+  }
+  .main_box{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    background-color: white;
+    border: #bdbcbc $border;
+    .main_box_angle{
+      top: 50px;
+      left: calc(50% - 5.5px);
+      width: 0;
+      border-left: 9px solid transparent;
+      border-bottom: 13px solid white;
+      border-right: 9px solid transparent;
+    }
+    .main_box_left{
+      min-width: 37px;
+      height: 216px;
+      margin: 22px 0;
+      .pillar{
+        width: 2px;
+        height: 100%;
+        background: #9b9c9d;
+      }
+      .main_box_left_wire{
+        width: 2px;
+        height: 24px;
+        margin: auto;
+        background: #9b9c9d;
+      }
+      li:nth-of-type(4){
+        height: 110px;
+      }
+      .logo16{
+        @include circle(35px, 35px, 0,'js2.png',-605px -372px);
+        margin: auto;
+        border: #9b9c9d $border;
+      }
+      .logo17{
+        @include circle(35px, 35px, none,'js2.png',-612px -248px);
+        margin: auto;
+        border: #9b9c9d $border;
+      }
+    }
+    .main_box_right{
+      width: 100%;
+      li{
+        line-height: 40px;
+        margin: 20px 0 20px 27px;
+        background: #2fa1c7;
+      }
+      .main_box_right_angle{
+        left: 5px;
+        display: inline-block;
+        height: 0;
+        margin-top: 10px;
+        border-top: 10px solid transparent;
+        border-right: 22px solid #2fa1c7;
+        border-bottom: 10px solid transparent;
       }
     }
   }
@@ -279,6 +351,7 @@ body{
     }
   }
   .main2 {
+    min-height: calc(100vh - 140px);
     background-color: #34beed;
     .column1-box {
       position: relative;
@@ -302,13 +375,16 @@ body{
       color: white;
     }
     .column {
-      @include flex(space-between);
-      margin-bottom: 80px;
+      @include flex(none,flex-start);
+      flex-wrap: wrap;
       .box {
         position: relative;
-        width: 25%;
+        //display: none;
+        width: 26%;
+        margin: 0 3.66666% 70px;
         background-color: #f3c881;
         border: white 5px solid;
+        box-sizing: border-box;
         p{
           padding: 30% 0;
         }
@@ -318,6 +394,7 @@ body{
         }
         .affair {
           position: absolute;
+          @include flex();
           bottom: -50px;
           left: -5px;
           width: calc(100% + 10px);
@@ -325,23 +402,14 @@ body{
         .logo7 {
           @include circle(23px, 23px, 0,'13.png', -139px -243px);
         }
-        .logo8 {
-          @include circle(23px, 23px, 0,'13.png', -182px -243px);
-        }
-        .logo9 {
-          @include circle(23px, 23px, 0,'13.png', -96px -243px);
-        }
-        .logo10 {
-          @include circle(23px, 23px, 0,'13.png', -10px -243px);
-        }
       }
-      .box:hover .affair {
-        display: block;
-        @include flex(space-between);
-      }
+      //.box:hover .affair {
+      //  display: block;
+      //  @include flex();
+      //}
     }
+    
   }
-
   .footer2 {
     position: fixed;
     bottom: 0;
