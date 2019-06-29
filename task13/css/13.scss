@@ -1,0 +1,563 @@
+html, body{
+  height: 100%;
+}
+body{
+  min-width: 320px;
+  max-width: 768px;
+  margin: auto;
+  overflow-x: hidden;
+  p, ul, button, a {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    list-style-type: none;
+  }
+  button {
+    padding: 0;
+    outline: none;
+    border: 0;
+  }
+  $border: 1px solid;
+  @mixin width($min:320px,$max:768px) {
+    min-width: $min;
+    max-width: $max;
+  }
+  @mixin flex($justify:center,$align:center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+  }
+  @mixin circle($width:24px,$height:24px,$rude:2px,$image:'13.png',$site:-290px -109px) {
+    width: $width;
+    height: $height;
+    border: #6dd2e9 $rude solid;
+    background: url($image) $site;
+  }
+  //冷启动页面
+  .blue{
+    @include flex();
+    flex-direction: column;
+    height: 100%;
+    background-color: #29BDE0;
+  }
+  //页面一：版本选择
+  input[type="checkbox"]:checked ~ label {
+    margin-left: 300px;
+  }
+  input[type="checkbox"]:checked ~ .content {
+    right: -300px;
+    margin-left: 300px;
+    box-shadow: -3px -3px 16px 0 #9b9c9d;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  label {
+    top: 18px;
+    @include flex(space-between);
+    flex-direction: column;
+    width: 40px;
+    height: 24px;
+    background-color: #6dd2e9;
+    span {
+      width: 30px;
+      height: 3px;
+      background-color: white;
+    }
+  }
+  input[type="checkbox"]:checked ~ nav {
+    top: 0;
+    display: block;
+  }
+  nav {
+    top: 0;
+    width: 300px;
+    height: 100%;
+    .column {
+      @include flex(flex);
+      flex-wrap: nowrap;
+      height: 50px;
+      border-bottom: #eaeaea $border;
+      color: #6dd2e9;
+      .logo1 {
+        @include circle(24px, 24px, 2px,'D:/test/task13/img/13.png',-290px -110px);
+      }
+      .logo2 {
+        @include circle(24px, 24px, 2px,'D:/test/task13/img/13.png', -290px -149px);
+      }
+      .logo3 {
+        @include circle(24px, 24px, 2px,'D:/test/task13/img/13.png', -290px -70px);
+      }
+      .logo4 {
+        @include circle(24px, 24px, 2px,'D:/test/task13/img/13.png', -52px -242px);
+      }
+    }
+  }
+  header{
+    width: 100%;
+    height: 60px;
+    background-color: #6dd2e9;
+  }
+  .content {
+    width: 100%;
+    @include width();
+    height: 100vh;
+    min-height: 640px;
+    background-color: #eff0f1;
+    //玩家人数配比页面
+    .box{
+      @include flex(none);
+      .box-left{
+        @include flex();
+        width: 20%;
+        height: 30vh;
+        background-color: white;
+        border-right: #F0F0F0 $border;
+        writing-mode: vertical-rl;
+      }
+      .box-right{
+        @include flex();
+        flex-direction: column;
+        width: 80%;
+        height: 30vh;
+        background-color: white;
+        .box-right-column1{
+          @include flex(space-between);
+          width: 100%;
+          height: 80%;
+          border-bottom: #F0F0F0 $border;
+        }
+        span{
+          @include flex();
+          width: 50%;
+          color: #BCBCBC;
+        }
+        .pen{
+          @include flex();
+          height: 20%;
+          color: #29BDE0;
+        }
+      }
+    }
+    .box1{
+      @include flex(space-around,none);
+      flex-direction: column;
+      height: 15vh;
+      background-color: white;
+      input{
+        width: calc(100% - 40px);
+        height: 40px;
+        color: #BCBCBC;
+        border: 0;
+        border-bottom:  #F0F0F0 $border;
+        outline: none;
+      }
+    }
+    .box2{
+      @include flex(space-around,none);
+      flex-direction: column;
+      height: 15vh;
+      background-color: white;
+      .box2-column1{
+        input{
+          width: 30px;
+          height: 28px;
+          text-align: center;
+          margin: 0 5px;
+          font-size: 24px;
+          color: #FAB344;
+          background-color: #eff0f1;
+          border: 0;
+          outline: none;
+        }
+        input::-webkit-input-placeholder {
+          color: #FAB344;
+        }
+        span{
+          color: #FAB344;
+        }
+      }
+      .box2-column2{
+        @include flex();
+        p{
+          width: 20px;
+          height: 20px;
+          color: #fab344;
+          border: #BCBCBC $border;
+        }
+        input[type='range'] {
+          outline: none;
+          -webkit-appearance: none;
+          width: 86% !important;
+          background: -webkit-linear-gradient(#00c3d5, #00c3d5) no-repeat, #ffe5bb;
+          background-size: 0 100%;
+          height: 5px;
+        }
+        input[type='range']::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          height: 20px;
+          width: 36px;
+          background:  #fff url("D:/test/task13/image/矩形 24 拷贝 2.png") no-repeat 10px;
+          border-radius: 3px;
+          border: #fab344 solid 1px;
+        }
+      }
+    }
+    button{
+      width: calc(100% - 40px);
+      height: 10vh;
+      color: white;
+      background-color: #fab344;
+    }
+    //版本选择页面
+    .main1 {
+      .searchInput {
+        width: calc(100% - 5px);
+      }
+      .submenu {
+        color: #949596;
+        background-color: white;
+        border: #a9a9a9 $border;
+        .column1 {
+          color: #f8b547;
+          border-bottom: #f8b547 $border;
+        }
+        .btn {
+          width: 70%;
+          height: 80px;
+          color: white;
+          background-color: #6dd2e9;
+        }
+        ul{
+          padding: 0;
+          color: white;
+          @include flex();
+        }
+        .btn1 {
+          width: 14px;
+          height: 14px;
+          margin: 0 3px;
+          background-color: #9b9c9d;
+        }
+        .btn1:hover {
+          background-color: #6dd2e9;
+        }
+        .logo5 {
+          top: calc(50% - 32px);
+          right: 4%;
+          @include circle(21px, 42px, 0,'D:/test/task13/img/13.png', -293px -10px);
+        }
+      }
+    }
+  }
+  //游戏流程页面（法官台本）
+  .main_day{
+    width: calc(100% - 20px);
+    line-height: 50px;
+    margin: 10px;
+    color: #34beed;
+    background-color: white;
+    border: #bdbcbc $border;
+  }
+  .main_box{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    background-color: white;
+    border: #bdbcbc $border;
+    .main_box_angle{
+      top: 50px;
+      left: calc(50% - 5.5px);
+      width: 0;
+      border-left: 9px solid transparent;
+      border-bottom: 13px solid white;
+      border-right: 9px solid transparent;
+    }
+    .main_box_left{
+      min-width: 37px;
+      height: 216px;
+      margin: 22px 0;
+      .pillar{
+        width: 2px;
+        height: 100%;
+        background: #9b9c9d;
+      }
+      .main_box_left_wire{
+        width: 2px;
+        height: 142px;
+        margin: auto;
+        background: #9b9c9d;
+      }
+      .logo16{
+        @include circle(35px, 35px, 0,'D:/test/task13/img/js2.png',-605px -372px);
+        margin: auto;
+        border: #9b9c9d $border;
+      }
+      .logo17{
+        @include circle(35px, 35px, none,'D:/test/task13/img/js2.png',-612px -248px);
+        margin: auto;
+        border: #9b9c9d $border;
+      }
+    }
+    .main_box_right{
+      width: 100%;
+      li{
+        line-height: 40px;
+        margin: 20px 0 20px 27px;
+        background: #2fa1c7;
+      }
+      .main_box_right_angle{
+        left: 5px;
+        display: inline-block;
+        height: 0;
+        margin-top: 10px;
+        border-top: 10px solid transparent;
+        border-right: 22px solid #2fa1c7;
+        border-bottom: 10px solid transparent;
+      }
+    }
+  }
+  //页面二：投票
+  .header2 {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    @include flex(space-between);
+    @include width();
+    color: white;;
+    background-color: #34beed;
+    border-bottom: #FDFDFC $border;
+    .btn {
+      @include circle(29px, 30px, 0,'D:/test/task13/img/13.png', -177px -184px);
+    }
+    .logo6{
+      @include circle(27px, 27px, 0,'D:/test/task13/img/13.png', -226px -184px);
+    }
+    .logo12{
+      @include circle(19px, 31px, 0,'D:/test/task13/img/js2.png', -441px -321px);
+    }
+    .logo13{
+      @include circle(35px, 35px, 0,'D:/test/task13/img/js2.png', -616px -197px);
+    }
+  }
+  @media (min-height:992px){
+    .main2{
+      height: 100vh;
+    }
+  }
+  .main2 {
+    min-height: calc(100vh - 140px);
+    background-color: #34beed;
+    .column1-box {
+      position: relative;
+      @include flex(space-between);
+      height: 60px;
+      color: black;
+      background-color: #BAE9F4;
+      .btn1 {
+        right: 10px;
+        @include circle(39px, 39px, 0,'D:/test/task13/img/13.png', -10px -184px);
+        overflow: hidden;
+        audio {
+          position: absolute;
+          top: -7px;
+          left: -7px;
+          opacity: 0;
+        }
+      }
+    }
+    .white{
+      color: white;
+    }
+    .column {
+      @include flex(none,flex-start);
+      flex-wrap: wrap;
+      .box {
+        position: relative;
+        //display: none;
+        width: 26%;
+        margin: 0 3.66666% 70px;
+        background-color: #f3c881;
+        border: white 5px solid;
+        box-sizing: border-box;
+        p{
+          padding: 30% 0;
+        }
+        .order {
+          color: white;
+          background-color: #82af9b;
+        }
+        .affair {
+          position: absolute;
+          @include flex();
+          bottom: -50px;
+          left: -5px;
+          width: calc(100% + 10px);
+        }
+        .logo7 {
+          @include circle(23px, 23px, 0,'D:/test/task13/img/13.png', -139px -243px);
+        }
+      }
+      //.box:hover .affair {
+      //  display: block;
+      //  @include flex();
+      //}
+    }
+    
+  }
+  .footer2 {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    @include width();
+    line-height: 80px;
+    background-color: #34beed;
+    .btn {
+      width: 90%;
+      height: 60px;
+      color: white;
+      background-color: #f8b445;
+    }
+  }
+  //第三页：结果
+  .header3 {
+    position: fixed;
+    top: 0;
+    @include flex(space-between);
+    width: calc(100% - 20px);
+    @include width(300px, 748px);
+    height: 60px;
+    background-color: #34beed;
+    color: white;
+    .btn {
+      @include circle(38px, 32px, 0,'D:/test/task13/img/13.png', -69px -184px);
+    }
+    .btn1 {
+      @include circle(38px, 32px, 0,'D:/test/task13/img/13.png',-127px -184px);
+    }
+  }
+  .main3 {
+    .mark {
+      background-color: #34beed;
+      @include flex();
+      .logo11 {
+        @include circle(263px, 154px, 0,'D:/test/task13/img/13.png', -10px -10px);
+        color: white;
+      }
+    }
+    .content1 {
+      background-color: #34beed;
+      h2 {
+        margin: 0;
+        color: #f7c86f;
+      }
+      .key {
+        color: white;
+        ul {
+          height: 68px;
+          margin: 0;
+          padding: 0;
+        }
+        li {
+          width: 33%;
+        }
+      }
+    }
+    .content2 {
+      .column {
+        color: #bdbdbe;
+        border-bottom: #bdbdbe $border;
+        .box {
+          height: 31px;
+          vertical-align: bottom;
+        }
+        .black {
+          color: #5d5e5f;
+        }
+      }
+      .column1 {
+        height: 31px;
+        color: #34beed;
+      }
+    }
+  }
+  .footer3 {
+    position: fixed;
+    bottom: 0;
+    @include flex(space-between);
+    width: calc(100% - 40px);
+    @include width(280px, 728px);
+    height: 70px;
+    background: rgba(52, 189, 222, 0.5);
+    .btn {
+      width: 48%;
+      color: white;
+      background-color: #f37072;
+    }
+    .btn1 {
+      width: 48%;
+      color: white;
+      background-color: #f8b445;
+    }
+  }
+  .main4{
+    @include flex(none,center);
+    flex-direction: column;
+    height: calc(100vh - 61px);
+    background-color: #34beed;
+    border-top: #FDFDFC $border;
+    .box{
+      @include flex();
+      flex-direction: column;
+      width: 70%;
+      height: 60%;
+      padding: 0;
+      background-color: #FDEECC;
+      border: #FDFDFC 5px solid;
+      .box_h{
+        top: 105px;
+        left: calc(50% - 15px);
+        width: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #FDFDFC;
+        border: #FDEECC 2px solid;
+        border-radius: 50%;
+      }
+      .logo14{
+        @include circle(226px, 226px, 0,'D:/test/task13/img/js2.png', -10px -10px);
+      }
+      .logo15{
+        margin-left: calc(50% - 83.5px);
+        @include circle(167px, 167px, 0,'D:/test/task13/img/js2.png',-501px -10px);
+      }
+      .box_role{
+        width: 100%;
+      }
+      p{
+        display: none;
+        white-space: normal;
+      }
+      p:nth-child(2){
+        color: blue;
+      }
+      p:nth-child(3){
+        width: 100%;
+        color: #F56B81;
+        border-bottom: #FDFDFC $border;
+      }
+      p:nth-child(4){
+        color: #FCA000;
+      }
+    }
+    button{
+      width: 75%;
+      height: 8vh;
+      color: white;
+      background-color: #fab344;
+    }
+  }
+}
