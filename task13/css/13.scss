@@ -103,7 +103,7 @@ body{
   .content {
     width: 100%;
     @include width();
-    height: 100vh;
+    height: 100%;
     min-height: 640px;
     background-color: #eff0f1;
     //玩家人数配比页面
@@ -264,7 +264,7 @@ body{
   .main_box{
     display: flex;
     margin: 10px;
-    padding: 10px;
+    padding: 40px;
     color: white;
     background-color: white;
     border: #bdbcbc $border;
@@ -276,44 +276,41 @@ body{
       border-bottom: 13px solid white;
       border-right: 9px solid transparent;
     }
-    .main_box_left{
-      min-width: 37px;
-      height: 216px;
-      margin: 22px 0;
-      .pillar{
-        width: 2px;
-        height: 100%;
-        background: #9b9c9d;
-      }
-      .main_box_left_wire{
-        width: 2px;
-        height: 142px;
-        margin: auto;
-        background: #9b9c9d;
-      }
-      .logo16{
-        @include circle(35px, 35px, 0,'/test/task13/img/js2.png',-605px -372px);
-        margin: auto;
-        border: #9b9c9d $border;
-      }
-      .logo17{
-        @include circle(35px, 35px, none,'/test/task13/img/js2.png',-612px -248px);
-        margin: auto;
-        border: #9b9c9d $border;
-      }
-    }
     .main_box_right{
+      @include flex(space-between);
+      flex-direction: column;
       width: 100%;
+      margin-left: 20px;
+      padding: 0;
+      border-left: 2px solid #808080;
       li{
+        width: 100%;
         line-height: 40px;
-        margin: 20px 0 20px 27px;
-        background: #2fa1c7;
+        text-align: center;
+        div{
+          margin-left: 50px;
+          background: #2fa1c7;
+        }
+        .logo16{
+          left: 50px;
+          @include circle(40px, 40px, 0,'/test/task13/img/js2.png',-602px -370px);
+          background-color: white;
+          border: #9b9c9d $border;
+        }
+       .logo17{
+          left: 50px;
+          @include circle(40px, 40px, none,'/test/task13/img/js2.png',-610px -246px);
+          background-color: white;
+          border: #9b9c9d $border;
+        }
+      }
+      li:nth-of-type(2),li:nth-of-type(3),li:nth-of-type(4){
+        margin-top: 20px;
       }
       .main_box_right_angle{
-        left: 5px;
-        display: inline-block;
+        top: calc(50% - 10px);
+        left: -22px;
         height: 0;
-        margin-top: 10px;
         border-top: 10px solid transparent;
         border-right: 22px solid #2fa1c7;
         border-bottom: 10px solid transparent;
@@ -415,7 +412,7 @@ body{
     @include width();
     line-height: 80px;
     background-color: #34beed;
-    .btn {
+    .mebtn {
       width: 90%;
       height: 60px;
       color: white;

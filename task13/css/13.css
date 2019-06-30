@@ -123,7 +123,7 @@ body .content {
   width: 100%;
   min-width: 320px;
   max-width: 768px;
-  height: 100vh;
+  height: 100%;
   min-height: 640px;
   background-color: #eff0f1;
 }
@@ -327,7 +327,7 @@ body .main_day {
 body .main_box {
   display: flex;
   margin: 10px;
-  padding: 10px;
+  padding: 40px;
   color: white;
   background-color: white;
   border: #bdbcbc 1px solid;
@@ -342,58 +342,56 @@ body .main_box .main_box_angle {
   border-right: 9px solid transparent;
 }
 
-body .main_box .main_box_left {
-  min-width: 37px;
-  height: 216px;
-  margin: 22px 0;
-}
-
-body .main_box .main_box_left .pillar {
-  width: 2px;
-  height: 100%;
-  background: #9b9c9d;
-}
-
-body .main_box .main_box_left .main_box_left_wire {
-  width: 2px;
-  height: 142px;
-  margin: auto;
-  background: #9b9c9d;
-}
-
-body .main_box .main_box_left .logo16 {
-  width: 35px;
-  height: 35px;
-  border: #6dd2e9 0 solid;
-  background: url("/test/task13/img/js2.png") -605px -372px;
-  margin: auto;
-  border: #9b9c9d 1px solid;
-}
-
-body .main_box .main_box_left .logo17 {
-  width: 35px;
-  height: 35px;
-  border: #6dd2e9 none solid;
-  background: url("/test/task13/img/js2.png") -612px -248px;
-  margin: auto;
-  border: #9b9c9d 1px solid;
-}
-
 body .main_box .main_box_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
+  margin-left: 20px;
+  padding: 0;
+  border-left: 2px solid #808080;
 }
 
 body .main_box .main_box_right li {
+  width: 100%;
   line-height: 40px;
-  margin: 20px 0 20px 27px;
+  text-align: center;
+}
+
+body .main_box .main_box_right li div {
+  margin-left: 50px;
   background: #2fa1c7;
 }
 
+body .main_box .main_box_right li .logo16 {
+  left: 50px;
+  width: 40px;
+  height: 40px;
+  border: #6dd2e9 0 solid;
+  background: url("/test/task13/img/js2.png") -602px -370px;
+  background-color: white;
+  border: #9b9c9d 1px solid;
+}
+
+body .main_box .main_box_right li .logo17 {
+  left: 50px;
+  width: 40px;
+  height: 40px;
+  border: #6dd2e9 none solid;
+  background: url("/test/task13/img/js2.png") -610px -246px;
+  background-color: white;
+  border: #9b9c9d 1px solid;
+}
+
+body .main_box .main_box_right li:nth-of-type(2), body .main_box .main_box_right li:nth-of-type(3), body .main_box .main_box_right li:nth-of-type(4) {
+  margin-top: 20px;
+}
+
 body .main_box .main_box_right .main_box_right_angle {
-  left: 5px;
-  display: inline-block;
+  top: calc(50% - 10px);
+  left: -22px;
   height: 0;
-  margin-top: 10px;
   border-top: 10px solid transparent;
   border-right: 22px solid #2fa1c7;
   border-bottom: 10px solid transparent;
@@ -534,7 +532,7 @@ body .footer2 {
   background-color: #34beed;
 }
 
-body .footer2 .btn {
+body .footer2 .mebtn {
   width: 90%;
   height: 60px;
   color: white;

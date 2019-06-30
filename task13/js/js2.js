@@ -54,27 +54,38 @@ function put() {//发牌按钮
             var ciarr = new Array(civilian).fill('平民'); //动态生成平民数组
             var arr = kiarr.concat(ciarr); //杀手+ 平民   生成新数组
             if(a<=18 && a>=4){//判断玩家人数是否为4-18人
-                function shuffle(arr){//洗牌函数
+                function shuffle(arr){//洗牌函数：通过随机获取玩家身份并赋值给循环顺序上的玩家进行身份赋值
                     var len = arr.length;//对len赋值游戏玩家人数
-                    for(var i=0; i<len; i++){//便利
-                        var idx = Math.floor(Math.random() * (len - i));
-                        var temp = arr[idx];
-                        arr[idx] = arr[len - i -1];
-                        arr[len - i -1] =temp;
+                    for(var i=0; i<len; i++){//便利数组
+                        var idx = Math.floor(Math.random() * (len - i));//对idx赋值，一个小于len数组长度的随机数
+                        var temp = arr[idx];//对temp赋值arr数组中随机的一个身份“贫民或杀手”
+                        arr[idx] = arr[len - i -1];//对随机获取到的arr数组中的值修改为循环顺序的那位玩家的身份
+                        arr[len - i -1] =temp;//对数组中的每位玩家都进行赋值随机回去到的玩家身份
                     }
-                    return arr;
+                    return arr;//返回arr数组运行并结束
                 }
-                var res = new Array("");
-                for(var i = 0; i < 1000; i++){
+                var res = new Array("");//新建一个空数组
+                for(var i = 0; i < 1000; i++){//循环1000遍测试洗牌方法的差值，是否达到要求
                     var sorted = shuffle(arr.slice(0));
                     sorted.forEach(function(o,i){
                         res[i]= o;
                     });
                 }
+                for(var site=0;site<res.length;site++){//遍历数组，添加状态
+                    res[site]={name:res[site],order:"0",status:"live"}//对数组内的每个值新增对象
+                }
+                console.log(res)
                 var sen = JSON.stringify(res);//通过洗牌后的玩家身份数组转化成字符串
                 sessionStorage.res = sen;//转化后的字符串存入浏览器
                 sessionStorage.setItem('word1',q);//存入平民词组
                 sessionStorage.setItem('word2',w);//存入杀手词组
+                var  status_init = {
+                    kill: false,
+                    sketch: false,
+                    total: false,
+                    vote: false
+                }
+                sessionStorage.setItem("verdict",JSON.stringify(status_init))
             }
             location.href="js2.3.html"//循环结束跳转到下一页面
         }

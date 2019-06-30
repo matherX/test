@@ -8,9 +8,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="/test/task13/css/13.css">
     <link rel="stylesheet" href="/test/task13/css/common.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="/test/task13/js/state-machine.js"></script>
-    <script src="/test/task13/js/js2.4.js"></script>
 </head>
 <body>
     <header class="header2 f24">
@@ -18,24 +15,40 @@
         <p class="f24">法官台本</p>
         <a class="logo6 mr10"></a>
     </header>
-    <main class="content pt60">
-        <div class="rel">
-            <p class="main_day f20 tc rel">第一天</p>
+    <main class="content">
+        <div class="rel pt60">
+            <p class="main_day f20 tc">第一天</p>
             <div class="main_box">
                 <span class="main_box_angle abs"></span>
-                <!-- <div class="main_box_left rel">
-                </div> -->
-                <ul class="main_box_left">
-                    <li class="logo16 brs50"></li>
-                    <li class="main_box_left_wire"></li>
-                    <li class="logo17 brs50"></li>
-                    <li class="main_box_left_wire"></li>
-                </ul>
-                <ul class="main_box_right rel">
-                    <li class="fis f16 tc"><span class="main_box_right_angle abs"></span>杀手杀人</li>
-                    <li class="second f16 tc"><span class="main_box_right_angle abs"></span>亡灵发表遗言</li>
-                    <li class="thirdly f16 tc"><span class="main_box_right_angle abs"></span>玩家依次发言</li>
-                    <li class="finally f16 tc"><span class="main_box_right_angle abs"></span>全民投票</li>
+                <ul class="main_box_right">
+                    <li class="f16 tc">
+                        <span class="logo16 brs50 abs"></span>
+                        <div class="fis rel">
+                            <span class="main_box_right_angle abs"></span>
+                            杀手杀人
+                        </div>
+                    </li>
+                    <span></span>
+                    <li class="f16 tc">
+                        <div class="second  rel">
+                            <span class="main_box_right_angle abs"></span>
+                            亡灵发表遗言
+                        </div>
+                    </li>
+                    <li class="f16 tc">
+                        <div class="thirdly rel">
+                            <span class="main_box_right_angle abs"></span>
+                            玩家依次发言
+                        </div>
+                    </li>
+                    <li class="f16 tc">
+                        <span class="logo17 brs50 abs"></span>
+                        <div class="finally rel">
+                            <span class="main_box_right_angle abs"></span>
+                            全民投票
+                        </div>
+                    </li>
+                    <span></span>
                 </ul>
             </div>
         </div>
@@ -45,4 +58,7 @@
         <button type="button" class="btn1 f24 tc lh50 br5">法官日志</button>
     </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="/test/task13/js/state-machine.js"></script>
+<script src="/test/task13/js/js2.4.js"></script>
 </html>
