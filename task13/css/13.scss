@@ -82,16 +82,16 @@ body{
       border-bottom: #eaeaea $border;
       color: #6dd2e9;
       .logo1 {
-        @include circle(24px, 24px, 2px,'D:/test/task13/img/13.png',-290px -110px);
+        @include circle(24px, 24px, 2px,'/test/task13/img/13.png',-290px -110px);
       }
       .logo2 {
-        @include circle(24px, 24px, 2px,'D:/test/task13/img/13.png', -290px -149px);
+        @include circle(24px, 24px, 2px,'/test/task13/img/13.png', -290px -149px);
       }
       .logo3 {
-        @include circle(24px, 24px, 2px,'D:/test/task13/img/13.png', -290px -70px);
+        @include circle(24px, 24px, 2px,'/test/task13/img/13.png', -290px -70px);
       }
       .logo4 {
-        @include circle(24px, 24px, 2px,'D:/test/task13/img/13.png', -52px -242px);
+        @include circle(24px, 24px, 2px,'/test/task13/img/13.png', -52px -242px);
       }
     }
   }
@@ -199,7 +199,7 @@ body{
           -webkit-appearance: none;
           height: 20px;
           width: 36px;
-          background: white url("D:/test/task13/img/logo\ \(2\).png") no-repeat 10px;
+          background: white url("/test/task13/image/logo\ \(3\).png") no-repeat 10px;
           border-radius: 3px;
           border: #fab344 solid 1px;
         }
@@ -247,7 +247,7 @@ body{
         .logo5 {
           top: calc(50% - 32px);
           right: 4%;
-          @include circle(21px, 42px, 0,'D:/test/task13/img/13.png', -293px -10px);
+          @include circle(21px, 42px, 0,'/test/task13/img/13.png', -293px -10px);
         }
       }
     }
@@ -292,12 +292,12 @@ body{
         background: #9b9c9d;
       }
       .logo16{
-        @include circle(35px, 35px, 0,'D:/test/task13/img/js2.png',-605px -372px);
+        @include circle(35px, 35px, 0,'/test/task13/img/js2.png',-605px -372px);
         margin: auto;
         border: #9b9c9d $border;
       }
       .logo17{
-        @include circle(35px, 35px, none,'D:/test/task13/img/js2.png',-612px -248px);
+        @include circle(35px, 35px, none,'/test/task13/img/js2.png',-612px -248px);
         margin: auto;
         border: #9b9c9d $border;
       }
@@ -331,16 +331,16 @@ body{
     background-color: #34beed;
     border-bottom: #FDFDFC $border;
     .btn {
-      @include circle(29px, 30px, 0,'D:/test/task13/img/13.png', -177px -184px);
+      @include circle(29px, 30px, 0,'/test/task13/img/13.png', -177px -184px);
     }
     .logo6{
-      @include circle(27px, 27px, 0,'D:/test/task13/img/13.png', -226px -184px);
+      @include circle(27px, 27px, 0,'/test/task13/img/13.png', -226px -184px);
     }
     .logo12{
-      @include circle(19px, 31px, 0,'D:/test/task13/img/js2.png', -441px -321px);
+      @include circle(19px, 31px, 0,'/test/task13/img/js2.png', -441px -321px);
     }
     .logo13{
-      @include circle(35px, 35px, 0,'D:/test/task13/img/js2.png', -616px -197px);
+      @include circle(35px, 35px, 0,'/test/task13/img/js2.png', -616px -197px);
     }
   }
   @media (min-height:992px){
@@ -359,7 +359,7 @@ body{
       background-color: #BAE9F4;
       .btn1 {
         right: 10px;
-        @include circle(39px, 39px, 0,'D:/test/task13/img/13.png', -10px -184px);
+        @include circle(39px, 39px, 0,'/test/task13/img/13.png', -10px -184px);
         overflow: hidden;
         audio {
           position: absolute;
@@ -398,7 +398,7 @@ body{
           width: calc(100% + 10px);
         }
         .logo7 {
-          @include circle(23px, 23px, 0,'D:/test/task13/img/13.png', -139px -243px);
+          @include circle(23px, 23px, 0,'/test/task13/img/13.png', -139px -243px);
         }
       }
       //.box:hover .affair {
@@ -433,10 +433,10 @@ body{
     background-color: #34beed;
     color: white;
     .btn {
-      @include circle(38px, 32px, 0,'D:/test/task13/img/13.png', -69px -184px);
+      @include circle(38px, 32px, 0,'/test/task13/img/13.png', -69px -184px);
     }
     .btn1 {
-      @include circle(38px, 32px, 0,'D:/test/task13/img/13.png',-127px -184px);
+      @include circle(38px, 32px, 0,'/test/task13/img/13.png',-127px -184px);
     }
   }
   .main3 {
@@ -444,7 +444,7 @@ body{
       background-color: #34beed;
       @include flex();
       .logo11 {
-        @include circle(263px, 154px, 0,'D:/test/task13/img/13.png', -10px -10px);
+        @include circle(263px, 154px, 0,'/test/task13/img/13.png', -10px -10px);
         color: white;
       }
     }
@@ -528,11 +528,11 @@ body{
         border-radius: 50%;
       }
       .logo14{
-        @include circle(226px, 226px, 0,'D:/test/task13/img/js2.png', -10px -10px);
+        @include circle(226px, 226px, 0,'/test/task13/img/js2.png', -10px -10px);
       }
       .logo15{
         margin-left: calc(50% - 83.5px);
-        @include circle(167px, 167px, 0,'D:/test/task13/img/js2.png',-501px -10px);
+        @include circle(167px, 167px, 0,'/test/task13/img/js2.png',-501px -10px);
       }
       .box_role{
         width: 100%;

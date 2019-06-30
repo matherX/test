@@ -89,28 +89,28 @@ body nav .column .logo1 {
   width: 24px;
   height: 24px;
   border: #6dd2e9 2px solid;
-  background: url("D:/test/task13/img/13.png") -290px -110px;
+  background: url("/test/task13/img/13.png") -290px -110px;
 }
 
 body nav .column .logo2 {
   width: 24px;
   height: 24px;
   border: #6dd2e9 2px solid;
-  background: url("D:/test/task13/img/13.png") -290px -149px;
+  background: url("/test/task13/img/13.png") -290px -149px;
 }
 
 body nav .column .logo3 {
   width: 24px;
   height: 24px;
   border: #6dd2e9 2px solid;
-  background: url("D:/test/task13/img/13.png") -290px -70px;
+  background: url("/test/task13/img/13.png") -290px -70px;
 }
 
 body nav .column .logo4 {
   width: 24px;
   height: 24px;
   border: #6dd2e9 2px solid;
-  background: url("D:/test/task13/img/13.png") -52px -242px;
+  background: url("/test/task13/img/13.png") -52px -242px;
 }
 
 body header {
@@ -253,7 +253,7 @@ body .content .box2 .box2-column2 input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 20px;
   width: 36px;
-  background: white url("D:/test/task13/img/logo (2).png") no-repeat 10px;
+  background: white url("/test/task13/image/logo (3).png") no-repeat 10px;
   border-radius: 3px;
   border: #fab344 solid 1px;
 }
@@ -312,7 +312,7 @@ body .content .main1 .submenu .logo5 {
   width: 21px;
   height: 42px;
   border: #6dd2e9 0 solid;
-  background: url("D:/test/task13/img/13.png") -293px -10px;
+  background: url("/test/task13/img/13.png") -293px -10px;
 }
 
 body .main_day {
@@ -365,7 +365,7 @@ body .main_box .main_box_left .logo16 {
   width: 35px;
   height: 35px;
   border: #6dd2e9 0 solid;
-  background: url("D:/test/task13/img/js2.png") -605px -372px;
+  background: url("/test/task13/img/js2.png") -605px -372px;
   margin: auto;
   border: #9b9c9d 1px solid;
 }
@@ -374,7 +374,7 @@ body .main_box .main_box_left .logo17 {
   width: 35px;
   height: 35px;
   border: #6dd2e9 none solid;
-  background: url("D:/test/task13/img/js2.png") -612px -248px;
+  background: url("/test/task13/img/js2.png") -612px -248px;
   margin: auto;
   border: #9b9c9d 1px solid;
 }
@@ -417,28 +417,28 @@ body .header2 .btn {
   width: 29px;
   height: 30px;
   border: #6dd2e9 0 solid;
-  background: url("D:/test/task13/img/13.png") -177px -184px;
+  background: url("/test/task13/img/13.png") -177px -184px;
 }
 
 body .header2 .logo6 {
   width: 27px;
   height: 27px;
   border: #6dd2e9 0 solid;
-  background: url("D:/test/task13/img/13.png") -226px -184px;
+  background: url("/test/task13/img/13.png") -226px -184px;
 }
 
 body .header2 .logo12 {
   width: 19px;
   height: 31px;
   border: #6dd2e9 0 solid;
-  background: url("D:/test/task13/img/js2.png") -441px -321px;
+  background: url("/test/task13/img/js2.png") -441px -321px;
 }
 
 body .header2 .logo13 {
   width: 35px;
   height: 35px;
   border: #6dd2e9 0 solid;
-  background: url("D:/test/task13/img/js2.png") -616px -197px;
+  background: url("/test/task13/img/js2.png") -616px -197px;
 }
 
 @media (min-height: 992px) {
@@ -467,7 +467,7 @@ body .main2 .column1-box .btn1 {
   width: 39px;
   height: 39px;
   border: #6dd2e9 0 solid;
-  background: url("D:/test/task13/img/13.png") -10px -184px;
+  background: url("/test/task13/img/13.png") -10px -184px;
   overflow: hidden;
 }
 
@@ -521,7 +521,7 @@ body .main2 .column .box .logo7 {
   width: 23px;
   height: 23px;
   border: #6dd2e9 0 solid;
-  background: url("D:/test/task13/img/13.png") -139px -243px;
+  background: url("/test/task13/img/13.png") -139px -243px;
 }
 
 body .footer2 {
@@ -559,14 +559,14 @@ body .header3 .btn {
   width: 38px;
   height: 32px;
   border: #6dd2e9 0 solid;
-  background: url("D:/test/task13/img/13.png") -69px -184px;
+  background: url("/test/task13/img/13.png") -69px -184px;
 }
 
 body .header3 .btn1 {
   width: 38px;
   height: 32px;
   border: #6dd2e9 0 solid;
-  background: url("D:/test/task13/img/13.png") -127px -184px;
+  background: url("/test/task13/img/13.png") -127px -184px;
 }
 
 body .main3 .mark {
@@ -580,7 +580,7 @@ body .main3 .mark .logo11 {
   width: 263px;
   height: 154px;
   border: #6dd2e9 0 solid;
-  background: url("D:/test/task13/img/13.png") -10px -10px;
+  background: url("/test/task13/img/13.png") -10px -10px;
   color: white;
 }
 
@@ -688,7 +688,7 @@ body .main4 .box .logo14 {
   width: 226px;
   height: 226px;
   border: #6dd2e9 0 solid;
-  background: url("D:/test/task13/img/js2.png") -10px -10px;
+  background: url("/test/task13/img/js2.png") -10px -10px;
 }
 
 body .main4 .box .logo15 {
@@ -696,7 +696,7 @@ body .main4 .box .logo15 {
   width: 167px;
   height: 167px;
   border: #6dd2e9 0 solid;
-  background: url("D:/test/task13/img/js2.png") -501px -10px;
+  background: url("/test/task13/img/js2.png") -501px -10px;
 }
 
 body .main4 .box .box_role {
