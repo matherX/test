@@ -72,11 +72,11 @@ function put() {//发牌按钮
                     });
                 }
                 for(var site=0;site<res.length;site++){//遍历数组，添加状态
-                    res[site]={name:res[site],order:"0",status:"live"}//对数组内的每个值新增对象
+                    res[site]={name:res[site],order:+site,status:"live",vause:" "}//对数组内的每个值新增对象
                 }
                 console.log(res)
-                var sen = JSON.stringify(res);//通过洗牌后的玩家身份数组转化成字符串
-                sessionStorage.res = sen;//转化后的字符串存入浏览器
+                var net = JSON.stringify(res);//通过洗牌后的玩家身份数组转化成字符串
+                sessionStorage.res = net;//转化后的字符串存入浏览器
                 sessionStorage.setItem('word1',q);//存入平民词组
                 sessionStorage.setItem('word2',w);//存入杀手词组
                 var  status_init = {

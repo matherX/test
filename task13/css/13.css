@@ -334,7 +334,7 @@ body .main_box {
 }
 
 body .main_box .main_box_angle {
-  top: 50px;
+  top: 120px;
   left: calc(50% - 5.5px);
   width: 0;
   border-left: 9px solid transparent;
@@ -382,6 +382,14 @@ body .main_box .main_box_right li .logo17 {
   background: url("/test/task13/img/js2.png") -610px -246px;
   background-color: white;
   border: #9b9c9d 1px solid;
+}
+
+body .main_box .main_box_right .notes {
+  display: none;
+  width: calc(100% - 50px);
+  margin: 20px 0 0 50px;
+  color: black;
+  white-space: pre-wrap;
 }
 
 body .main_box .main_box_right li:nth-of-type(2), body .main_box .main_box_right li:nth-of-type(3), body .main_box .main_box_right li:nth-of-type(4) {
@@ -653,6 +661,8 @@ body .main4 {
   display: flex;
   justify-content: none;
   align-items: center;
+  min-width: 320px;
+  max-width: 768px;
   flex-direction: column;
   height: calc(100vh - 61px);
   background-color: #34beed;
@@ -665,9 +675,9 @@ body .main4 .box {
   align-items: center;
   flex-direction: column;
   width: 70%;
-  height: 60%;
+  height: 65%;
   padding: 0;
-  background-color: #FDEECC;
+  background-color: #b5ffff;
   border: #FDFDFC 5px solid;
 }
 
@@ -721,7 +731,8 @@ body .main4 .box p:nth-child(4) {
 }
 
 body .main4 button {
-  width: 75%;
+  bottom: 10%;
+  width: 80%;
   height: 8vh;
   color: white;
   background-color: #fab344;

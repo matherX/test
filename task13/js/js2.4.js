@@ -1,16 +1,44 @@
-var ben = sessionStorage.res;//读取之前页面保存的字符串
-var net = JSON.parse(ben);//字符串转化数组
-function star(){//跳转函数
-    location.href="js2.4.html"
-}
+var net = JSON.parse(sessionStorage.net);//获取net的字符串对象，并转化为数组
+var order = sessionStorage.getItem("order");//获取被点击的盒子序号
+var notes1 = sessionStorage.getItem("notes1");//获取杀手杀人信息
+var recore = new Array("");
+var day = 0;
+var count = ["一","二","三","四","五","六","七","八","九"];
+recore[day] = {day:count[day],notesfrom:" ",notesend:" "}
+var verdict = JSON.parse(sessionStorage.getItem("verdict"));//获取状态当前的字符串并转化为对象
+// var recore = JSON.parse(sessionStorage.getItem("recore"));
+// sessionStorage.setItem("recore",JSON.stringify(recore));
 $(document).ready(function(){//JQUERY的页面加载完成后直接执行的函数事件
     $(".box").hide();//隐藏所有盒子
-    for(var i=0;i<net.length;i++){//循环遍历所有盒子显示与角色相同数量的盒子
+    for(let i=0;i<net.length;i++){//循环遍历所有盒子显示与角色相同数量的盒子
         $(".box:eq("+i+")").show();//显示盒子
         $(".role").eq(i).text(net[i].name);//改变盒子的文字（角色身份）
-        $(".affair").hide();//影藏下方面图片
+        $(".affair").hide();//隐藏小刀图标
+    };
+    var kiarr = 0, ciarr = 0;
+    for(let i=0;i<net.length;i++){//循环，改变被杀死玩家盒子的颜色
+        if(net[i].vause !== " "){
+            $(".box").eq(i).find(".role").css("background-color","#82af9b");
+        }
+        else{
+            if(net[i].name == "平民"){
+                kiarr++;
+            }
+            else if(net[i].name == "杀手"){
+                ciarr++;
+            }
+        }
     }
+    if(kiarr < ciarr || ciarr == 0){
+        location.href="13.3.html"
+    }
+    if(verdict.kill == false){
+        $(".mebtn").click(function(){//法官台本的点击函数：效果仅生效的一次的跳转函数
+            location.href="js2.4.html";
+        });
+    };
 });
+console.log(recore)
 var fsm = new StateMachine({//创建状态机
     init:'kill',//设置状态机的初始状态
     transitions:[//设置状态机需要的几种状态，开始状态与最后结束状态保持一致，形成闭环
@@ -20,62 +48,31 @@ var fsm = new StateMachine({//创建状态机
         {name: 'finally' , from: 'vote' , to: 'kill' }
     ]
 });
-$(function() {//自执行函数
-    if(verdict.kill == true || verdict.vote == true){//判断杀人与投票按钮是否是被点击过
-        if(verdict.kill == true){//判断现在杀人按钮是否被点击时，为真改变页面提示文字
-            fsm.one();//状态切换
-            $(".fis").css("background-color","#35b788");
-            $(".fis").children("span").css("border-right","22px solid #35b788");
-            $("header").find("p").text("杀手杀人");
-            $(".black").text("杀手请睁眼，杀手请选择要杀的对象");
-            $(".white").text("点击下方玩家头像，对被杀玩家进行标记")
-        }
-        if(verdict.vote == true){//判断现在投票按钮是否被点击时，为真改变页面提示文字
-            $("header").find("p").text("投票");
-            $(".black").text("发言讨论结束，大家请投票");
-            $(".white").text("点击得票数最多人的头像")
-        }
-        $(".box").click(function(){//设置玩家盒子的点击事件
-            for(let a=0;a<net.length;a++){//便利所有显示的玩家盒子
-                $(this).find(".affair").show();//
-                $(this).siblings().find(".affair").hide();
-            }
-        });
-        $(".mebtn").text("确定");
-    }	
-    if(verdict.kill == true && verdict.sketch == true && verdict.total == true && verdict.vote == true){
-
-    }
-});
-
-console.log(fsm.state)
-var verdict = JSON.parse(sessionStorage.getItem("verdict"));
-console.log(verdict)
-$(document).ready(function(){
-    $(".fis").click(function(){
-        switch(fsm.state){
-            case "kill":
-                verdict.kill = true;
-                if(verdict.kill == true){
+$(document).ready(function(){//自执行函数
+    $(".fis").click(function(){//对杀人按钮创建点击函数
+        switch(fsm.state){//判断语句，判断当前的状态
+            case "kill"://当状态时kill时
+                verdict.kill = true;//改变kill状态为真，表示状态已经被点击
+                if(verdict.kill == true){//判断
                     $(".fis").css("background-color","#35b788");
                     $(".fis").children("span").css("border-right","22px solid #35b788");
                 }
-                fsm.one();
-			    sessionStorage.setItem('verdict', JSON.stringify(verdict));
-                console.log(verdict.kill == true)
+                fsm.one();//状态转换
+			    sessionStorage.setItem('verdict', JSON.stringify(verdict));//上传kill改变后的状态属性
                 location.href="13.2.html";
             break;
             default: alert("天亮了，杀手无法杀人");
-        }
+        }                                   
     });
-    $(".second").click(function(){
-        switch(fsm.state){
-            case "sketch":
-                $(".second").css("background-color","#35b788");
+    $(".second").click(function(){//创建亡灵遗言按钮
+        switch(fsm.state){//判断状态
+            case "sketch"://当状态为sketch
+                $(".second").css("background-color","#35b788");//改变按钮颜色
                 $(".second").children("span").css("border-right","22px solid #35b788");
                 fsm.second();
                 verdict.sketch = true;
-			    sessionStorage.setItem('verdict', JSON.stringify(verdict));
+                sessionStorage.setItem('verdict', JSON.stringify(verdict));
+                alert("请亡灵发表遗言");
             break;
             default: alert("亡灵发言完毕，请进行下一步操作");
         }
@@ -87,7 +84,8 @@ $(document).ready(function(){
                 $(".thirdly").children("span").css("border-right","22px solid #35b788");
                 fsm.thirdly();
                 verdict.total = true;
-			    sessionStorage.setItem('verdict', JSON.stringify(verdict));
+                sessionStorage.setItem('verdict', JSON.stringify(verdict));
+                alert("请玩家一次发言，推测隐藏杀手");
             break;
             default: alert("发言完毕，请进行下一步操作");
         }
@@ -102,7 +100,105 @@ $(document).ready(function(){
                 sessionStorage.setItem('verdict', JSON.stringify(verdict));
                 location.href="13.2.html";
             break;
-            default: alert("本轮结束");;
+            default: alert("请按照游戏流程进行，开始下一步操作");;
         }
     });
+});
+$(function() {//自执行函数
+    if(verdict.vote == true || verdict.kill == true){//判断杀人与投票按钮是否是被点击过
+        $(".box").click(function(){//设置玩家盒子的点击事件
+            $(this).find(".affair").fadeTo("200",1);//通过$(this)返回父级，.find查找子级盒子并显
+            $(this).siblings().find(".affair").fadeOut("50",0);//设置box盒子内的子级（小刀图片）在点击显示后查找兄弟同级的标签进行隐藏
+            order = $(".box").index(this);//对order变量赋值（返回box的点击函数用index返回元素相对于其他元素的位置）
+            sessionStorage.setItem("order",order);//被点击盒子的序列号上传到浏览器      
+        });
+        $(".mebtn").click(function(){//跳转函数
+            console.log(recore)
+            if(order !== null){//判断是否选中玩家
+                if(net[order].vause == " "){//判断玩家是否存活
+                    if($(".deed").text() == "杀手杀人" && net[order].name == "平民"){//判断是否为杀手杀人时间以及环节内操作是否正确
+                        notes = parseFloat(order) + 1 + "号被杀手杀死，真实身份是" + net[order].name;//创建死亡玩家信息
+                        if($(".notes").text() == ""){//有问题想要的效果：判断杀手杀人的记录信息是否为空，为空才能杀人，如果有杀人信息，当天杀手不能再次杀人
+                            sessionStorage.setItem("notes1",notes1);//上传死亡玩家信息
+                            var notes = parseFloat(order) + 1 + "号被杀后杀死，真实身份是" + net[order].name;//创建死亡玩家信息
+                            net[order].vause = "killde";//改变被杀玩家状态
+                            //location.href="js2.4.html";
+                            recore[day] = notes;
+                            sessionStorage.setItem("recore",JSON.stringify(recore));
+                        }
+                        else{
+                            alert("杀手每局只能杀死一位玩家，请遵守游戏规则")
+                        }
+                        console.log($(".notes").text() == "")
+                    }
+                    else if($(".deed").text() == "投票"){//判断是否全员投票环节
+                        var notesend = parseFloat(order) + 1 + "号被玩家投死，真实身份是" + net[order].name;//创建死亡玩家信息
+                        net[order].vause = "vote";
+                        location.href="js2.4.html";
+                        recore[day].notesend = notesend;
+                        sessionStorage.setItem("recore",JSON.stringify(recore));
+                    }
+                    else{
+                        alert("杀手无法自杀");
+                    }
+                    sessionStorage.removeItem("order");
+                    sessionStorage.setItem("net", JSON.stringify(net));//上传到浏览器中的数组，改变死亡玩家状态
+                    sessionStorage.setItem("recore",JSON.stringify(recore));
+                    // var recore = new Array("");
+                    // for(var a=0;a<=net.length/2;a++){
+                    //     if(notesfrom !== null){
+                    //         recore[a] = {day:day[a],notesfrom:notesfrom,notesend:" "}
+                    //     }
+                    //     else{
+                    //         recore[a].notesend = notesend;
+                    //     }
+                    // }
+                    // console.log(notes1)
+                    // console.log(recore)
+                }
+                else{
+                    alert("该玩家已死亡，请重新选择")
+                }
+            }
+            else{
+                alert("请选择想要踢出局的玩家")
+            }
+            //判断状态机是否循环完毕
+            var day = 0;
+            if(verdict.kill == true && verdict.sketch == true && verdict.total == true && verdict.vote == true){
+                $(".main_box").hide();//想要的效果是在第一天结束，点击实现弹出的效果（可以用slideToggle()滑动效果实现）
+                let time = 1;
+                $('.main_day').click(function(){
+                    if(time%2 == 0){
+                        $(".main_box").hide();   
+                    }
+                    else{
+
+                        $(".main_box").show();
+                    }
+                    time++
+                });
+                //重置状态机，为下次循环做准备
+                verdict.kill = false; verdict.sketch = false; verdict.total = false; verdict.vote = false;
+                sessionStorage.setItem('verdict', JSON.stringify(verdict));//重置状态机上传浏览器
+            }
+            console.log(day)
+        });
+        if(verdict.kill == true){//判断现在杀人按钮是否被点击时
+            fsm.one();//状态切换
+            $(".fis").css("background-color","#35b788");//改变杀人按钮的颜色
+            $(".fis").children("span").css("border-right","22px solid #35b788");
+            $(".deed").text("杀手杀人");//改变杀人页面的头部名称
+            $(".black").text("杀手请睁眼，杀手请选择要杀的对象");
+            $(".white").text("点击下方玩家头像，对被杀玩家进行标记");
+            $(".notes").eq(0).css("display","block");//在杀人按钮下方显示杀手操作信息
+            $(".notes").eq(0).text(recore);//记录杀人的行为
+        }
+        if(verdict.vote == true){//判断现在投票按钮是否被点击时，为真改变页面提示文字
+            $(".deed").text("投票");
+            $(".black").text("发言讨论结束，大家请投票");
+            $(".white").text("点击得票数最多人的头像")
+        }
+        $(".mebtn").text("确定");//改变玩家身份页面的最下方的橘色按钮文字0
+    }
 });

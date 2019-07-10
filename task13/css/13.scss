@@ -269,7 +269,7 @@ body{
     background-color: white;
     border: #bdbcbc $border;
     .main_box_angle{
-      top: 50px;
+      top: 120px;
       left: calc(50% - 5.5px);
       width: 0;
       border-left: 9px solid transparent;
@@ -303,6 +303,13 @@ body{
           background-color: white;
           border: #9b9c9d $border;
         }
+      }
+      .notes{
+        display: none;
+        width: calc(100% - 50px);
+        margin: 20px 0 0 50px;
+        color: black;
+        white-space: pre-wrap;
       }
       li:nth-of-type(2),li:nth-of-type(3),li:nth-of-type(4){
         margin-top: 20px;
@@ -502,6 +509,7 @@ body{
   }
   .main4{
     @include flex(none,center);
+    @include width();
     flex-direction: column;
     height: calc(100vh - 61px);
     background-color: #34beed;
@@ -510,9 +518,9 @@ body{
       @include flex();
       flex-direction: column;
       width: 70%;
-      height: 60%;
+      height: 65%;
       padding: 0;
-      background-color: #FDEECC;
+      background-color: #b5ffff;
       border: #FDFDFC 5px solid;
       .box_h{
         top: 105px;
@@ -551,7 +559,8 @@ body{
       }
     }
     button{
-      width: 75%;
+      bottom: 10%;
+      width: 80%;
       height: 8vh;
       color: white;
       background-color: #fab344;

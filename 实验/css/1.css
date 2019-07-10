@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+}
+#range {
+    width: 170px;
+    height: 6px;
+    background-color: #e5e5e5;
+    border-radius: 3px;
+}
+#text {
+    width: 49px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 6px;
+    border: solid 1px #dcdcdc;
+    margin-left: 20px;
+}
+/* 滑动条 */
+input[type='range'] {
+    margin-top: 8px;
+    outline: none;
+    -webkit-appearance: none;
+    /*清除系统默认样式*/
+    width: 56% !important;
+    background: -webkit-linear-gradient(#00c3d5, #00c3d5) no-repeat, #ddd;
+    background-size: 0 100%;
+    /*设置左右宽度比例*/
+    height: 3px;
+    /*横条的高度*/
+}
+/*拖动块的样式*/
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /*清除系统默认样式*/
+    height: 16px;
+    /*拖动块高度*/
+    width: 16px;
+    /*拖动块宽度*/
+    background: #fff;
+    /*拖动块背景*/
+    border-radius: 50%;
+    /*外观设置为圆形*/
+    border: solid 1px #ddd;
+    /*设置边框*/
+}
+span:nth-of-type(1){
+    height: 50px;
+    background:blue;
+}
+span:nth-of-type(2){
+    height: 50px;
+    background:blueviolet
+}
+span:nth-of-type(3){
+    height: 50px;
+    background:brown;
+}
+span:nth-of-type(4){
+    height: 50px;
+    background:cornflowerblue;
+}
+/* ol {
+    list-style-position: inside;
+} 
+ol li {
+    background-image: url("js2\ \(13\).png") ;
+    background-position: -5px; 
+    background-repeat: no-repeat;
+    padding-left: 7px; 
+}  */
+/* ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 50px;
+    padding: 0;
+    border-left: 2px solid #808080;
+    list-style-type: none;
+} 
+ul li .logo16{
+    position: absolute;
+    left: -22px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    border: 1px solid rgb(99, 99, 99);
+    background: url("js2\ \(13\).png")no-repeat 7px white;
+    /* background-position: -5px; 
+    background-repeat: no-repeat;
+    padding-left: 7px;  */
+/* } 
+ul li{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+ul li .one{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 50px;
+    background: #2fa1c7;
+}
+.main_box_right_angle{
+    position: absolute;
+    left: -22px;
+    display: inline-block;
+    height: 0;
+    margin-top: 10px;
+    border-top: 10px solid transparent;
+    border-right: 22px solid #2fa1c7;
+    border-bottom: 10px solid transparent;
+}
+li:nth-of-type(2),li:nth-of-type(3),li:nth-of-type(4){
+    margin-top: 20px;
+}  */
+.one{
+    display: inline-block;
+    text-align: center;
+    width: 60px;
+    margin: 0;
+    border: 1px solid black;
+}
