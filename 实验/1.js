@@ -8,6 +8,31 @@ for(var i=1;i<=9;i++){
 console.log(sum)
 document.write(sum);
 document.write("<p>123</p>")
+
+var n = 0;
+var day = n + 1;
+function createDay() {
+    $('.main').append(function () {
+        return `<div class="day">第<span class="day-num"></span>天</div>
+    <div class="step">
+        <div class="div1">杀手杀人</div>
+        <div class="div2">亡灵发表遗言</div>
+        <div class="div3">玩家依次发言</div>
+        <div class="div4">全民投票</div>
+    </div>`;
+    });
+    //添加id
+    $('.step').eq(n).attr("id", function () {
+        return "day" + day;
+    });
+    //添加第几天
+    $('.day-num').eq(n).text(function () {
+        return day;
+    });
+    day = day + 1;
+    n = n + 1;
+}
+
 // var su = "";
 // for(var i=1;i<=9;i++){
 //     for(var j=1;j<=i;j++){

@@ -3,8 +3,6 @@ var order = sessionStorage.getItem("order");//获取被点击的盒子序号
 var verdict = JSON.parse(sessionStorage.getItem("verdict"));//获取状态当前的字符串并转化为对象
 var day = Number(sessionStorage.getItem("day"));//获取杀手杀人信息
 var recore = JSON.parse(sessionStorage.getItem("recore"));
-// var recore = JSON.parse(sessionStorage.getItem("recore"));
-// sessionStorage.setItem("recore",JSON.stringify(recore));
 console.log(typeof day)
 $(document).ready(function(){//JQUERY的页面加载完成后直接执行的函数事件
     $(".box").hide();//隐藏所有盒子
@@ -15,10 +13,10 @@ $(document).ready(function(){//JQUERY的页面加载完成后直接执行的函�
     };
     var kiarr = 0, ciarr = 0;
     for(let i=0;i<net.length;i++){//循环，改变被杀死玩家盒子的颜色
-        if(net[i].vause !== " "){
+        if(net[i].vause !== " "){//改变死亡玩家盒子的颜色
             $(".box").eq(i).find(".role").css("background-color","#82af9b");
         }
-        else{
+        else{//计算或者的平明及杀手玩家的数量
             if(net[i].name == "平民"){
                 kiarr++;
             }
@@ -26,8 +24,10 @@ $(document).ready(function(){//JQUERY的页面加载完成后直接执行的函�
                 ciarr++;
             }
         }
+        sessionStorage.setItem("kiarr",kiarr);//上传存活平民数
+        sessionStorage.setItem("ciarr",ciarr);//上传存活杀手数
     }
-    if(kiarr == ciarr || ciarr == 0){
+    if(kiarr == ciarr || ciarr == 0){//判断游戏是否需要进行下去
         location.href="13.3.html"
     }
     if(verdict.kill == false){
@@ -35,6 +35,48 @@ $(document).ready(function(){//JQUERY的页面加载完成后直接执行的函�
             location.href="js2.4.html";
         });
     };
+    for(var a=0;a<day;a++){//循环创建已经完成的的游戏天数盒子到页面
+        var box = "<div class=\"rel\">\n"+
+        "<p class=\"day1 f20 tc\">"+"第" + recore[a].day + "天"+"</p>\n"+
+        "<div class=\"main_box1\">\n"+
+        "<span class=\"main_box_angle abs\">"+"</span>\n"+
+        "<ul class=\"main_box_right\">\n"+
+        "<li class=\"f16 tc\">\n"+
+        "<span class=\"logo16 brs50 abs\">"+"</span>\n"+
+        "<div class=\"change rel\">\n"+
+        "<span class=\"main_box_right_angle1 abs\">"+"</span>"+"杀手杀人\n"+
+        "</div>\n"+
+        "</li>\n"+
+        "<span class=\"notes1\">"+recore[a].notesfrom+"</span>\n"+
+        "<li class=\"f16 tc\">\n"+
+        "<div class=\"change  rel\">\n"+
+        "<span class=\"main_box_right_angle1 abs\">"+"</span>"+"亡灵发表遗言\n"+
+        "</div>\n"+
+        "</li>\n"+
+        "<li class=\"f16 tc\">\n"+
+        "<div class=\"change rel\">\n"+
+        "<span class=\"main_box_right_angle1 abs\">"+"</span>"+"玩家依次发言\n"+
+        "</div>\n"+
+        "</li>\n"+
+        "<li class=\"f16 tc\">\n"+
+        "<span class=\"logo17 brs50 abs\">"+"</span>\n"+
+        "<div class=\"change rel\">\n"+
+        "<span class=\"main_box_right_angle1 abs\">"+"</span>"+"全民投票\n"+
+        "</div>\n"+
+        "</li>\n"+
+        "<span class=\"notes1\">"+recore[a].notesend+"</span>\n"+
+        "</ul>\n"+
+        "<div>\n"+
+        "<div>";
+        $(".goal").before(box);//使用before在元素前面添加盒子
+        $(".change").css("background-color","#35b788");
+        $(".change").children("span").css("border-right","22px solid #35b788");
+    }
+    $(".main_box1").hide();//隐藏完成天数的游戏详情
+    $(".day1").click(function(){//对之前的天数添加点击滑动隐藏显示的效果
+        $(this).siblings(".main_box1").slideToggle();
+    })
+    $(".day").text("第" + recore[day].day + "天");//更改成最新天数
 });
 var fsm = new StateMachine({//创建状态机
     init:'kill',//设置状态机的初始状态
@@ -50,7 +92,7 @@ $(document).ready(function(){//自执行函数
         switch(fsm.state){//判断语句，判断当前的状态
             case "kill"://当状态时kill时
                 verdict.kill = true;//改变kill状态为真，表示状态已经被点击
-                if(verdict.kill == true){//判断
+                if(verdict.kill == true){//判断kill状态是否被点击
                     $(".fis").css("background-color","#35b788");
                     $(".fis").children("span").css("border-right","22px solid #35b788");
                 }
@@ -114,13 +156,11 @@ $(function() {//自执行函数
                 if(net[order].vause == " "){//判断玩家是否存活
                     if($(".deed").text() == "杀手杀人" && net[order].name == "平民"){//判断是否为杀手杀人时间以及环节内操作是否正确
                         notes = parseFloat(order) + 1 + "号被杀手杀死，真实身份是" + net[order].name;//创建死亡玩家信息
-                        if($(".notes").text() == ""){//有问题想要的效果：判断杀手杀人的记录信息是否为空，为空才能杀人，如果有杀人信息，当天杀手不能再次杀人
+                        if(recore[day].notesfrom == " "){//有问题想要的效果：判断杀手杀人的记录信息是否为空，为空才能杀人，如果有杀人信息，当天杀手不能再次杀人
                             // sessionStorage.setItem("notes1",notes1);//上传死亡玩家信息
                             var notes = parseFloat(order) + 1 + "号被杀后杀死，真实身份是" + net[order].name;//创建死亡玩家信息
                             net[order].vause = "killde";//改变被杀玩家状态
                             location.href="js2.4.html";
-                            console.log(recore)
-                            console.log(day)
                             recore[day].notesfrom = notes;
                             sessionStorage.setItem("recore",JSON.stringify(recore));
                         }
@@ -144,17 +184,6 @@ $(function() {//自执行函数
                     sessionStorage.removeItem("order");
                     sessionStorage.setItem("net", JSON.stringify(net));//上传到浏览器中的数组，改变死亡玩家状态
                     sessionStorage.setItem("recore",JSON.stringify(recore));
-                    // var recore = new Array("");
-                    // for(var a=0;a<=net.length/2;a++){
-                    //     if(notesfrom !== null){
-                    //         recore[a] = {day:day[a],notesfrom:notesfrom,notesend:" "}
-                    //     }
-                    //     else{
-                    //         recore[a].notesend = notesend;
-                    //     }
-                    // }
-                    // console.log(notes1)
-                    // console.log(recore)
                 }
                 else{
                     alert("该玩家已死亡，请重新选择")
@@ -163,25 +192,13 @@ $(function() {//自执行函数
             else{
                 alert("请选择想要踢出局的玩家")
             }
-            判断状态机是否循环完毕
+            //判断状态机是否循环完毕
             if(verdict.kill == true && verdict.sketch == true && verdict.total == true && verdict.vote == true){
-                $(".main_box").hide();//想要的效果是在第一天结束，点击实现弹出的效果（可以用slideToggle()滑动效果实现）
-                let time = 1;
-                $('.main_day').click(function(){
-                    if(time%2 == 0){
-                        $(".main_box").hide();   
-                    }
-                    else{
-
-                        $(".main_box").show();
-                    }
-                    time++
-                });
                 //重置状态机，为下次循环做准备
                 verdict.kill = false; verdict.sketch = false; verdict.total = false; verdict.vote = false;
                 sessionStorage.setItem('verdict', JSON.stringify(verdict));//重置状态机上传浏览器
-                day++
-                sessionStorage.setItem("day",day)
+                day++//在状态机循环技术后，怎么加游戏天数
+                sessionStorage.setItem("day",day)//游戏天数上传浏览器
             }
         });
         if(verdict.kill == true){//判断现在杀人按钮是否被点击时
@@ -204,3 +221,8 @@ $(function() {//自执行函数
         $(".mebtn").text("确定");//改变玩家身份页面的最下方的橘色按钮文字0
     }
 });
+$(".btn1:first-child").click(function(){//提前结束游戏的按钮
+    if(confirm("您确定结束本轮游戏吗")){
+        location.href="js2.2.html";
+    }
+})

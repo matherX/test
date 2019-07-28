@@ -1,4 +1,3 @@
-// var ben = sessionStorage.res;//读取之前页面保存的字符串
 var net = JSON.parse(sessionStorage.res);//字符串转化数组
 var q = sessionStorage.getItem("word1");//读取平民关键词
 var w = sessionStorage.getItem("word2");//读取杀手关键词

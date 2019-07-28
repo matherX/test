@@ -1,6 +1,6 @@
-html, body{
-  height: 100%;
-}
+// html, body{
+//   height: 100%;
+// }
 body{
   min-width: 320px;
   max-width: 768px;
@@ -39,7 +39,7 @@ body{
   .blue{
     @include flex();
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
     background-color: #29BDE0;
   }
   //页面一：版本选择
@@ -103,7 +103,7 @@ body{
   .content {
     width: 100%;
     @include width();
-    height: 100%;
+    height: 100vh;
     min-height: 640px;
     background-color: #eff0f1;
     //玩家人数配比页面
@@ -253,7 +253,11 @@ body{
     }
   }
   //游戏流程页面（法官台本）
-  .main_day{
+  .main5{
+    min-height: calc(100vh - 140px);
+    background-color: #eff0f1;
+  }
+  .day, .day1{
     width: calc(100% - 20px);
     line-height: 50px;
     margin: 10px;
@@ -261,7 +265,7 @@ body{
     background-color: white;
     border: #bdbcbc $border;
   }
-  .main_box{
+  .main_box, .main_box1{
     display: flex;
     margin: 10px;
     padding: 40px;
@@ -269,7 +273,7 @@ body{
     background-color: white;
     border: #bdbcbc $border;
     .main_box_angle{
-      top: 120px;
+      top: 50px;
       left: calc(50% - 5.5px);
       width: 0;
       border-left: 9px solid transparent;
@@ -306,6 +310,8 @@ body{
       }
       .notes{
         display: none;
+      }
+      .notes, .notes1{
         width: calc(100% - 50px);
         margin: 20px 0 0 50px;
         color: black;
@@ -314,7 +320,7 @@ body{
       li:nth-of-type(2),li:nth-of-type(3),li:nth-of-type(4){
         margin-top: 20px;
       }
-      .main_box_right_angle{
+      .main_box_right_angle, .main_box_right_angle1{
         top: calc(50% - 10px);
         left: -22px;
         height: 0;
@@ -405,12 +411,7 @@ body{
           @include circle(23px, 23px, 0,'../img/13.png', -139px -243px);
         }
       }
-      //.box:hover .affair {
-      //  display: block;
-      //  @include flex();
-      //}
-    }
-    
+    } 
   }
   .footer2 {
     position: fixed;
@@ -461,7 +462,7 @@ body{
       .key {
         color: white;
         ul {
-          height: 68px;
+          // height: 68px;
           margin: 0;
           padding: 0;
         }
@@ -474,13 +475,13 @@ body{
       .column {
         color: #bdbdbe;
         border-bottom: #bdbdbe $border;
-        .box {
-          height: 31px;
-          vertical-align: bottom;
-        }
-        .black {
-          color: #5d5e5f;
-        }
+      }
+      .box {
+        height: 31px;
+        vertical-align: bottom;
+      }
+      .black {
+        color: #5d5e5f;
       }
       .column1 {
         height: 31px;
