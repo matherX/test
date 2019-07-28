@@ -1,13 +1,11 @@
 var net = JSON.parse(sessionStorage.net);//获取net的字符串对象，并转化为数组
 var order = sessionStorage.getItem("order");//获取被点击的盒子序号
-var notes1 = sessionStorage.getItem("notes1");//获取杀手杀人信息
-var recore = new Array("");
-var day = 0;
-var count = ["一","二","三","四","五","六","七","八","九"];
-recore[day] = {day:count[day],notesfrom:" ",notesend:" "}
 var verdict = JSON.parse(sessionStorage.getItem("verdict"));//获取状态当前的字符串并转化为对象
+var day = Number(sessionStorage.getItem("day"));//获取杀手杀人信息
+var recore = JSON.parse(sessionStorage.getItem("recore"));
 // var recore = JSON.parse(sessionStorage.getItem("recore"));
 // sessionStorage.setItem("recore",JSON.stringify(recore));
+console.log(typeof day)
 $(document).ready(function(){//JQUERY的页面加载完成后直接执行的函数事件
     $(".box").hide();//隐藏所有盒子
     for(let i=0;i<net.length;i++){//循环遍历所有盒子显示与角色相同数量的盒子
@@ -29,7 +27,7 @@ $(document).ready(function(){//JQUERY的页面加载完成后直接执行的函�
             }
         }
     }
-    if(kiarr < ciarr || ciarr == 0){
+    if(kiarr == ciarr || ciarr == 0){
         location.href="13.3.html"
     }
     if(verdict.kill == false){
@@ -38,7 +36,6 @@ $(document).ready(function(){//JQUERY的页面加载完成后直接执行的函�
         });
     };
 });
-console.log(recore)
 var fsm = new StateMachine({//创建状态机
     init:'kill',//设置状态机的初始状态
     transitions:[//设置状态机需要的几种状态，开始状态与最后结束状态保持一致，形成闭环
@@ -113,17 +110,18 @@ $(function() {//自执行函数
             sessionStorage.setItem("order",order);//被点击盒子的序列号上传到浏览器      
         });
         $(".mebtn").click(function(){//跳转函数
-            console.log(recore)
             if(order !== null){//判断是否选中玩家
                 if(net[order].vause == " "){//判断玩家是否存活
                     if($(".deed").text() == "杀手杀人" && net[order].name == "平民"){//判断是否为杀手杀人时间以及环节内操作是否正确
                         notes = parseFloat(order) + 1 + "号被杀手杀死，真实身份是" + net[order].name;//创建死亡玩家信息
                         if($(".notes").text() == ""){//有问题想要的效果：判断杀手杀人的记录信息是否为空，为空才能杀人，如果有杀人信息，当天杀手不能再次杀人
-                            sessionStorage.setItem("notes1",notes1);//上传死亡玩家信息
+                            // sessionStorage.setItem("notes1",notes1);//上传死亡玩家信息
                             var notes = parseFloat(order) + 1 + "号被杀后杀死，真实身份是" + net[order].name;//创建死亡玩家信息
                             net[order].vause = "killde";//改变被杀玩家状态
-                            //location.href="js2.4.html";
-                            recore[day] = notes;
+                            location.href="js2.4.html";
+                            console.log(recore)
+                            console.log(day)
+                            recore[day].notesfrom = notes;
                             sessionStorage.setItem("recore",JSON.stringify(recore));
                         }
                         else{
@@ -135,6 +133,8 @@ $(function() {//自执行函数
                         var notesend = parseFloat(order) + 1 + "号被玩家投死，真实身份是" + net[order].name;//创建死亡玩家信息
                         net[order].vause = "vote";
                         location.href="js2.4.html";
+                        console.log(notesend)
+                        console.log(recore)
                         recore[day].notesend = notesend;
                         sessionStorage.setItem("recore",JSON.stringify(recore));
                     }
@@ -163,8 +163,7 @@ $(function() {//自执行函数
             else{
                 alert("请选择想要踢出局的玩家")
             }
-            //判断状态机是否循环完毕
-            var day = 0;
+            判断状态机是否循环完毕
             if(verdict.kill == true && verdict.sketch == true && verdict.total == true && verdict.vote == true){
                 $(".main_box").hide();//想要的效果是在第一天结束，点击实现弹出的效果（可以用slideToggle()滑动效果实现）
                 let time = 1;
@@ -181,8 +180,9 @@ $(function() {//自执行函数
                 //重置状态机，为下次循环做准备
                 verdict.kill = false; verdict.sketch = false; verdict.total = false; verdict.vote = false;
                 sessionStorage.setItem('verdict', JSON.stringify(verdict));//重置状态机上传浏览器
+                day++
+                sessionStorage.setItem("day",day)
             }
-            console.log(day)
         });
         if(verdict.kill == true){//判断现在杀人按钮是否被点击时
             fsm.one();//状态切换
@@ -192,12 +192,14 @@ $(function() {//自执行函数
             $(".black").text("杀手请睁眼，杀手请选择要杀的对象");
             $(".white").text("点击下方玩家头像，对被杀玩家进行标记");
             $(".notes").eq(0).css("display","block");//在杀人按钮下方显示杀手操作信息
-            $(".notes").eq(0).text(recore);//记录杀人的行为
+            $(".notes").eq(0).text(recore[day].notesfrom);//记录杀人的行为
         }
         if(verdict.vote == true){//判断现在投票按钮是否被点击时，为真改变页面提示文字
             $(".deed").text("投票");
             $(".black").text("发言讨论结束，大家请投票");
             $(".white").text("点击得票数最多人的头像")
+            $(".notes").eq(1).css("display","block");//在杀人按钮下方显示杀手操作信息
+            $(".notes").eq(1).text(recore[day].notesend);//记录杀人的行为
         }
         $(".mebtn").text("确定");//改变玩家身份页面的最下方的橘色按钮文字0
     }

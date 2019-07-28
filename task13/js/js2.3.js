@@ -50,6 +50,14 @@ function allot(){//点击事件
         $('.self').text("法官查看");//改变下一步提示信息为“法官查看”
     }
     else{//判断i不等于小于net的长度则输出
+        var day = 0;//游戏天数
+        var recore = new Array("");//新建数组整备记录游戏流程的结果
+        var count = ["一","二","三","四","五","六","七","八","九"];//数字汉化
+        for(var a=0;a<Math.floor(net.length/2);a++){//创建数组对象
+            recore[a] = {day:count[a],notesfrom:" ",notesend:" "}
+        }
+        sessionStorage.setItem("day",day);//上传天数
+        sessionStorage.setItem("recore",JSON.stringify(recore))//上传笔记本（记录游戏流程就结果的容器）
         location.href="13.2.html";//跳转下一个页面。
         var res = JSON.stringify(net);
         sessionStorage.net = res;
