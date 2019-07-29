@@ -3,11 +3,6 @@ var q = sessionStorage.getItem("word1");//读取平民关键词
 var w = sessionStorage.getItem("word2");//读取杀手关键词
 var i = 0.5;
 function allot(){//点击事件
-    var plate = $("ul");
-    plate.animate({width:'65%',height:'60%'},10);
-    plate.animate({opacity:'0'},140);
-    plate.animate({opacity:'1'},10);
-    plate.animate({width:'70%',height:'65%'},140);
     var o= Math.floor(i + 1);//申明变量o等于（i + 1）结果向下取整，省略余数
     var a= Math.floor(i + 2);//申明变量o等于（i + 2）结果向下取整，省略余数
     if(i <= net.length - 1){//判断i是否小于数组net-1的长度
@@ -15,13 +10,13 @@ function allot(){//点击事件
             $("ul").css("background", "#b5ffff");
             $('#li').text(o);//改变卡片的序列号
             $('.self').text("查看" + o + "号身份");//改变按钮下一步的提示信息
-            $("li>p").fadeOut(10);//隐藏卡片正面
-            $(".logo14").fadeTo("140",1);//显示卡片反面
+            $("li>p").hide();//隐藏卡片正面
+            $(".logo14").show();//显示卡片反面
         }
         else{//i不为整数试输出，显示卡片发面
             $("ul").css("background", "#FDEECC");
-            $(".logo14").fadeOut(10);//影藏反面
-            $("li>p").fadeTo("140",1);//显正面
+            $(".logo14").hide();//影藏反面
+            $("li>p").show();//显正面
             if(net[Math.floor(i)].name.match("平民")){//判断玩家角色是否为平民
                 $(".role").text("角色: 平民");//改变角色为平民
                 $(".char").text("词组: " +  q);//改变平民词组
@@ -32,13 +27,10 @@ function allot(){//点击事件
             }
             $('.self').text("隐藏并传递给" + a + "号");//改变按钮下一步的提示信息数字大于身份卡的数字
         }
-        console.log(net[Math.floor(i)].name)
-        console.log(net[Math.floor(i)]);
-        console.log(net.length);
     }
     else if(i == net.length - 0.5){//i=net数组长度-0.5时输出（i每次增加0.5，i最后的值为net数组的长度减0.5）
-        $(".logo14").fadeOut(10);//影藏卡片方面
-        $('li>p').fadeTo("140",1);//显示卡片正面
+        $(".logo14").hide();//影藏卡片方面
+        $('li>p').show();//显示卡片正面
         $(".role").text("角色: " + net[net.length - 1].name);//改变角色身份
         if(net[net.length - 1].name.match("平民")){//判断角色身份并添加相应的词组
             $(".char").text("词组:" +  q);

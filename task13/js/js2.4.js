@@ -177,6 +177,10 @@ $(function() {//自执行函数
                         console.log(recore)
                         recore[day].notesend = notesend;
                         sessionStorage.setItem("recore",JSON.stringify(recore));
+                        verdict.kill = false; verdict.sketch = false; verdict.total = false; verdict.vote = false;
+                        sessionStorage.setItem('verdict', JSON.stringify(verdict));//重置状态机上传浏览器
+                        day++//在状态机循环技术后，怎么加游戏天数
+                        sessionStorage.setItem("day",day)//游戏天数上传浏览器
                     }
                     else{
                         alert("杀手无法自杀");
@@ -188,18 +192,24 @@ $(function() {//自执行函数
                 else{
                     alert("该玩家已死亡，请重新选择")
                 }
+                // if(net[order].vause == " "){
+                    
+                // }
+                // {
+                //     alert("该玩家已死亡，请重新选择")
+                // }
             }
             else{
                 alert("请选择想要踢出局的玩家")
             }
             //判断状态机是否循环完毕
-            if(verdict.kill == true && verdict.sketch == true && verdict.total == true && verdict.vote == true){
-                //重置状态机，为下次循环做准备
-                verdict.kill = false; verdict.sketch = false; verdict.total = false; verdict.vote = false;
-                sessionStorage.setItem('verdict', JSON.stringify(verdict));//重置状态机上传浏览器
-                day++//在状态机循环技术后，怎么加游戏天数
-                sessionStorage.setItem("day",day)//游戏天数上传浏览器
-            }
+            // if(verdict.kill == true && verdict.sketch == true && verdict.total == true && verdict.vote == true){
+            //     //重置状态机，为下次循环做准备
+            //     verdict.kill = false; verdict.sketch = false; verdict.total = false; verdict.vote = false;
+            //     sessionStorage.setItem('verdict', JSON.stringify(verdict));//重置状态机上传浏览器
+            //     day++//在状态机循环技术后，怎么加游戏天数
+            //     sessionStorage.setItem("day",day)//游戏天数上传浏览器
+            // }
         });
         if(verdict.kill == true){//判断现在杀人按钮是否被点击时
             fsm.one();//状态切换
