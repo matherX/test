@@ -21,7 +21,7 @@
                 <span><img class="pr10" src="../image/logo (4).png">杀&emsp;手<p id="p1" class="pl5 pr5">2</p>人</span>
                 <span><img class="pr10" src="../image/logo (1).png">水&emsp;民<p id="p2" class="p2 pl5 pr5">6</p>人</span>
             </div>
-            <p onclick="allot()" class="pen">点击设置<img class="pl10" src="../image/logo (2).png"></p>
+            <p class="pen">点击设置<img class="pl10" src="../image/logo (2).png"></p>
          </div>
     </div>
     <div class="box1 mt10 ml20 mr20 pt10 pb10">
@@ -32,12 +32,12 @@
     </div>
     <div class="box2 mt10 ml20 mr20 f18 pt10 pb10">
         <p class="box2-column1 ml20 mr20">请输入玩家人数
-            <input type="text" id="count" maxlength="2" placeholder="8" value="8" onchange="off()"
-                   oninput="value=value.replace(/[^\d]/g,'')" name="points">
+            <input type="text" id="count" maxlength="2" placeholder="8" onchange="off()" value="8"
+            max="18"min="4" oninput="value=value.replace(/[^\d]/g,'')" name="points">
             <span class="f13">玩家数量为4-18</span></p>
         <div class="box2-column2 mt20 ml20 mr20">
             <p onclick="plus()" id="plus" class="tc lh16">-</p>
-            <input type="range" id="monitor" oninput="slide()" value="8" class="mr10 ml10" max="18" min="4">
+            <input type="range" id="monitor" oninput="slide()" class="mr10 ml10"  value="8" max="18"min="4">
             <p onclick="subtract()" class="tc lh16">+</p>
         </div>
     </div>
