@@ -169,7 +169,7 @@ $(function() {//自执行函数
                         }
                         console.log($(".notes").text() == "")
                     }
-                    else if($(".deed").text() == "投票"){//判断是否全员投票环节
+                    else if($(".deed").text() == "投票"){//判断是否全员投票环节，投票后直接重置状态机并开始下一天，
                         var notesend = parseFloat(order) + 1 + "号被玩家投死，真实身份是" + net[order].name;//创建死亡玩家信息
                         net[order].vause = "vote";
                         location.href="js2.4.html";

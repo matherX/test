@@ -117,10 +117,15 @@ ul li .one{
 li:nth-of-type(2),li:nth-of-type(3),li:nth-of-type(4){
     margin-top: 20px;
 }  */
-.one{
+.one1,.one2,.one3,.one4,.one5,.one6,.one7,.one8,.one9{
     display: inline-block;
     text-align: center;
-    width: 60px;
+    width: 65px;
+    line-height: 30px;
     margin: 0;
+    color: rgb(253, 11, 92);
     border: 1px solid black;
+}
+.one1, .one3, .one5, .one7, .one9{
+    background-color: rgb(41, 205, 255);
 }

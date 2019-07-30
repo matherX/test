@@ -1,6 +1,6 @@
 var count = document.getElementById("count");//人数框
 var monitor = document.getElementById("monitor");//滑动块
-function ter(){//获取人数值与滑动块相等绑定
+function ter(){//建立玩家配比以及游戏逻辑的函数
     var killer= parseInt(count.value / 3);
     var civilian = count.value -killer;
     if(count.value<=18 && count.value>=4){
@@ -14,7 +14,7 @@ function ter(){//获取人数值与滑动块相等绑定
         alert("人数过多，请设置正确玩家数")
     }
 }
-function off() {//改变input内容后触发（输入完成后鼠标点击复选框外任意处生效）
+function off() {//改变input内容后触发（输入完成后鼠标点击复选框以外任意处生效）
     monitor.value = count.value;
     ter();
 }
@@ -39,7 +39,7 @@ function subtract(){//通过nonclick点击事件监听绑定的玩家人数与�
 function put() {//发牌按钮
     var q = document.getElementById("word1").value;//获取平民关词组（发现input内的文本信息只能用ID获取，类名获取时则为空）
     var w = document.getElementById("word2").value;//获取杀手词组（发现input内的文本信息只能用ID获取，类名获取时则为空）
-    if(q!=="" && w!=="" && q !== w){//判断水民与杀手词组是否都不为空
+    if(q!=="" && w!=="" && q !== w){//判断水民与杀手词组是否都不为空并且水民与杀手词组不能相同
         var killer = parseInt(count.value / 3);//计算杀手人数
         var civilian = count.value - killer;//计算平民人数
         var kiarr = new Array(killer).fill('杀手'); //动态生成杀手数组
