@@ -123,7 +123,7 @@ audio{
     height: 26px;
     font-size: 1.2rem;
     position: relative;
-    bottom: 10px;
+    bottom: 0;
     color: white;
     background-color: #82af9b;
 }

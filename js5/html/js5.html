@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/js5.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+</head>
+<body>
+    <form id="login">
+        <h3 class="tc">后台登陆</h3>
+        <input type="text" name="name" placeholder="账号">
+        <input type="password" name="pwd" placeholder="密码">
+        <span id="msg" class="red f12"></span>
+        <button id="btn" type="button">登录</button>
+    </form>
+    <!-- <form id="login" >
+        <input placeholder="用户名" name="name" type="text" >
+        <input placeholder="密码" name="pwd" type="password" >
+        <p id="msg"></p>
+        <button id="btn" type="submit" >登录</button>
+    </form> -->
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="../js/js5.js"></script>
+<script>
+    // $(document).ready(function(){
+    //     $("#btn").click(function(){
+    //        location.href="https://www.baidu.com";
+    //     });
+    // })
+// var oPut = document.getElementsByTagName("input");
+// var oMsg = document.getElementById("msg");
+// var oBtn = document.getElementById("btn");
+// var timer = null;
+// oBtn.onclick = function(event){
+//     event.preventDefault();
+//     var uname = oPut[0].value;
+//     var pwd = oPut[1].value;
+//     var data = "name=" + uname + "&pwd=" + pwd;
+//     console.log(uname)
+//     console.log(pwd)
+//     oMsg.innerHTML = 123;
+//     var xhr = new XMLHttpRequest();
+//     xhr.onreadystatechange = function(){
+//         if(xhr.readystate == 4){
+//             if( (xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){
+//                 var resdata = JSON.parse(xhr.responseText);
+//                 console.log(name);
+//                 console.log(pwd);
+//                 console.log(resdata);
+//                 if (resdata.code === 0) {
+//                     window.location.href = "http://dev.admin.carrots.ptteng.com/";
+//                 } else {
+//                     clearInterval(timer);
+//                     oMsg.innerHTML = resdata.message;
+//                     timer = setTimeout(function() {
+//                     oMsg.innerHTML = '';
+//                 }, 3000)
+//             }
+//                 console.log(resdata.code,resdata.message,resdata.data);
+//             }else{
+//                 alert(xhr.readystate);
+//             }
+//         }
+//     }
+//     //2.1 向服务器发送请求：open准备发送一个请求（1.get请求的方式  2***.jsp文件中在服务器中的位置  3是false同步，true异步
+//     xhr.open("POST","/carrots-admin-ajax/a/login",true);
+
+//     xhr.setRequestHeader('content-type', 'application/x-www-from-urlencoded');
+//     //2.2发送数据到端口
+//     xhr.send(data);
+
+// oBtn.onclilk = function(event){
+//     event.preventDefault();
+//     var uname = oPut[0].value;
+//     var pwd = oPut[1].value;
+//     oMsg.innerHTML = 123;
+//     var data = "name=" + uname + "&pwd=" + pwd;
+//     console.log(uname)
+//     console.log(pwd)
+    //3 接收参数
+    //var xhr = new XMLHttpRequest();
+    // xhr.onreadystatechange = function(){
+    //     if(xhr.readystate == 4){
+    //         if( (xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){
+    //             var resdata = JSON.parse(oAjax.responseText);
+    //             console.log(name);
+    //             console.log(pwd);
+    //             console.log(resdata);
+    //             if (resdata.code === 0) {
+    //                 window.location.href = "http://dev.admin.carrots.ptteng.com/";
+    //             } else {
+    //                 clearInterval(timer);
+    //                 oMsg.innerHTML = resdata.message;
+    //                 timer = setTimeout(function() {
+    //                 oMsg.innerHTML = '';
+    //             }, 3000)
+    //         }
+    //             console.log(resdata.code,resdata.message,resdata.data);
+    //         }else{
+    //             alert(xhr.readystate);
+    //         }
+    //     }
+    // }
+    // //2.1 向服务器发送请求：open准备发送一个请求（1.get请求的方式  2***.jsp文件中在服务器中的位置  3是false同步，true异步
+    // xhr.open("POST","/carrots-admin-ajax/a/login",true);
+
+    // xhr.setRequestHeader('content-type', 'application/x-www-from-urlencoded');
+    // //2.2发送数据到端口
+    // xhr.send(data);
+//}
+</script>
+</html>
