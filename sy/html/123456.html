@@ -3,9 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        /* img[src=""],img:not([src]){opacity:0;} */
+        img{
+            min-width: 100%;
+            min-height: 100%;
+            border: 0;
+            background: url("../image/456.jpg") no-repeat;
+        }
+        .container {
+    min-height: 120px;
+    /* z-index用来创建新的层叠上下文，这样子元素的z-index:-1不会超出容器 
+       具体可参见：http://www.zhangxinxu.com/wordpress/?p=5115
+    */
+    position: relative; z-index: 1;
+}
+.list {
+    /* 已经输入的姓名列表 */
+    display: inline-block; background-color: #f0f3f9;
+}
+.list:after {
+    content: '×';
+}
+input {
+    /* 去掉输入框默认UI */
+    width: 80px;
+    outline: none;  
+    border: 0;
+}
+.border {
+    /* 尺寸永远和容器一样大，假装是容器 */
+    position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: -1;
+    border: 1px solid #bbb;
+}
+.input:focus + .border{
+    /* 模拟父选择器效果精髓所在 */
+    border-color: #1271E0;    
+}
+.input:focus + .list{
+    color: blue;
+}
+    </style>
 </head>
 <body>
 <p>架构开发接口了 解开了</p>
-<div style="width: 100px;height:100px; background-color:red;"></div>
+<div style="width: 600px;height:900px; background-color:white;">
+    <img src="http://www.xcwljy.cn/images/pixel.gif" alt="">
+</div>
+<div class="container">
+    <span class="list">李易峰</span>
+    <span class="list">赵丽颖</span>
+    <span for="input" class="list">杨紫</span><input id="input" class="input">
+    <label class="border" for="input"></label>
+</div>
+<script>
+    var twoSum = function(nums, target) {
+    var arr = new Array
+    for(var i=0;i<nums.length;i++){
+        for(var o=1;o<nums.length;o++){
+            if(nums[i] + nums[o] == 9){
+                arr.push(i)
+                arr.push(o)
+                console.log(i,o)
+                return
+            }
+        }
+    }
+};
+    nums = [2, 7, 11, 15], target = 9
+</script>
 </body>
 </html>

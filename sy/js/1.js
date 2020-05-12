@@ -613,6 +613,18 @@
 
 //     oAjax.send(data);
 // } 
+var length = "11";
+function fnone() {
+	console.info(this.length)
+}
+fnone();  // 10
+
+var x = 'global';
+let y = 'global';
+console.log(this.x); // "global"
+console.log(x)
+console.log(this.y); // undefined
+console.log(y)
 function load(){
     var xmlhttp;//兼容性写法
     if(window.XMLHttpRequest){

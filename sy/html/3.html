@@ -7,21 +7,50 @@
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
-        .btn{
-            width: 500px;
-            height: 120px;
-            border: 0;
-            border-radius: 50px;
-            background-color: rgb(0, 162, 255);
-            outline: none;
+        body{
+            width: 100vw;
+            height: 100vh;
+            background: rgba(133, 252, 232, 0.171);
         }
-        /* .btn:fucos{
-            background: rgba(95, 95, 95, 0.288);
-            border-radius: 500px;
-        } */
     </style>
   </head>
 <body>
+    <div class="one">
+        <div class="two">1</div>
+    </div>
    <button type="button" class="btn">123</button>
+   <!-- 网页点线粒子插件-网站背景鼠标点线窝巢特效-canvas-nest.js(直接防再body标签内) -->
+   <script type="text/javascript" color="252,133,133" opacity='0.7' zIndex="-2" count="150" 
+    src="https://cdn.bootcss.com/canvas-nest.js/2.0.4/canvas-nest.js"></script>
+   <script>
+       function Foo() {
+            getName = function () { console.log(1); };
+            return this;
+        }
+        Foo.getName = function () { console.log(2); };
+        Foo.prototype.getName = function () { console.log(3); };
+        var getName = function () { console.log(4); };
+        function getName() { console.log(5); }
+    
+        //请写出以下输出结果：
+        Foo.getName(); //2
+        getName();//4
+        Foo().getName();//1
+        getName();//1
+        new Foo.getName(); //2
+        new Foo().getName();//3
+        new new Foo().getName();//3
+    //    one(10,100);
+    //    var one = function(a,b){
+    //        console.info(a*b)
+    //    }
+    //    function one(a,b){
+    //        console.info(a+b)
+    //    }
+    //    function one(a,b){
+    //        console.info((a+b)*2)
+    //    }
+    //    one(2,10)
+   </script>
 </body>
 </html>
